@@ -1,10 +1,10 @@
 [package]
 name = "tree-sitter-ic10"
-description = "ic10 grammar for the tree-sitter parsing library"
-version = "0.0.1"
+description = "Tree-sitter grammar for IC10 MIPS used in the game Stationeers"
+version = "0.0.2"
 keywords = ["incremental", "parsing", "ic10"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-ic10"
+repository = "https://github.com/Xandaros/tree-sitter-ic10"
 edition = "2018"
 license = "MIT"
 
