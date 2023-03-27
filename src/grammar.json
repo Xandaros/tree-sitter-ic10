@@ -119,7 +119,7 @@
                   "name": "identifier"
                 },
                 "named": true,
-                "value": "error"
+                "value": "invalid_instruction"
               }
             ]
           }

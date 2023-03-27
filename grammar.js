@@ -25,7 +25,7 @@ module.exports = grammar({
         ),
 
         instruction: $ => seq(
-            field('operation', choice($.operation, alias($.identifier, $.error))),
+            field('operation', choice($.operation, alias($.identifier, $.invalid_instruction))),
             repeat(field('operand',
                 $.operand
             ))

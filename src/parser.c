@@ -156,7 +156,7 @@ enum {
   sym_operation = 137,
   aux_sym_source_file_repeat1 = 138,
   aux_sym_instruction_repeat1 = 139,
-  alias_sym_error = 140,
+  alias_sym_invalid_instruction = 140,
   alias_sym_program = 141,
 };
 
@@ -301,7 +301,7 @@ static const char * const ts_symbol_names[] = {
   [sym_operation] = "operation",
   [aux_sym_source_file_repeat1] = "source_file_repeat1",
   [aux_sym_instruction_repeat1] = "instruction_repeat1",
-  [alias_sym_error] = "error",
+  [alias_sym_invalid_instruction] = "invalid_instruction",
   [alias_sym_program] = "program",
 };
 
@@ -446,7 +446,7 @@ static const TSSymbol ts_symbol_map[] = {
   [sym_operation] = sym_operation,
   [aux_sym_source_file_repeat1] = aux_sym_source_file_repeat1,
   [aux_sym_instruction_repeat1] = aux_sym_instruction_repeat1,
-  [alias_sym_error] = alias_sym_error,
+  [alias_sym_invalid_instruction] = alias_sym_invalid_instruction,
   [alias_sym_program] = alias_sym_program,
 };
 
@@ -1011,7 +1011,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [alias_sym_error] = {
+  [alias_sym_invalid_instruction] = {
     .visible = true,
     .named = true,
   },
@@ -1057,13 +1057,13 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
   [1] = {
-    [0] = alias_sym_error,
+    [0] = alias_sym_invalid_instruction,
   },
   [3] = {
     [0] = alias_sym_program,
   },
   [5] = {
-    [0] = alias_sym_error,
+    [0] = alias_sym_invalid_instruction,
   },
 };
 
