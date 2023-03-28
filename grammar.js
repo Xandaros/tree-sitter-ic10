@@ -370,6 +370,11 @@ module.exports = grammar({
             'Mature',
             'PrefabHash',
             'Seeding',
+
+            'Average',
+            'Sum',
+            'Minimum',
+            'Maximum',
         )))
     }
 });

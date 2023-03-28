@@ -1504,6 +1504,22 @@
             {
               "type": "STRING",
               "value": "Seeding"
+            },
+            {
+              "type": "STRING",
+              "value": "Average"
+            },
+            {
+              "type": "STRING",
+              "value": "Sum"
+            },
+            {
+              "type": "STRING",
+              "value": "Minimum"
+            },
+            {
+              "type": "STRING",
+              "value": "Maximum"
             }
           ]
         }
