@@ -247,50 +247,92 @@
         }
       }
     },
+    "_constant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "nan"
+        },
+        {
+          "type": "STRING",
+          "value": "pinf"
+        },
+        {
+          "type": "STRING",
+          "value": "ninf"
+        },
+        {
+          "type": "STRING",
+          "value": "pi"
+        },
+        {
+          "type": "STRING",
+          "value": "deg2rad"
+        },
+        {
+          "type": "STRING",
+          "value": "rad2deg"
+        },
+        {
+          "type": "STRING",
+          "value": "epsilon"
+        }
+      ]
+    },
     "number": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "SEQ",
             "members": [
               {
-                "type": "STRING",
-                "value": "-"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "[0-9]+"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SEQ",
+                "type": "CHOICE",
                 "members": [
                   {
                     "type": "STRING",
-                    "value": "."
+                    "value": "-"
                   },
                   {
-                    "type": "PATTERN",
-                    "value": "[0-9]+"
+                    "type": "BLANK"
                   }
                 ]
               },
               {
-                "type": "BLANK"
+                "type": "PATTERN",
+                "value": "[0-9]+"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "."
+                      },
+                      {
+                        "type": "PATTERN",
+                        "value": "[0-9]+"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
               }
             ]
           }
-        ]
-      }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_constant"
+        }
+      ]
     },
     "operation": {
       "type": "CHOICE",
@@ -430,6 +472,74 @@
         {
           "type": "STRING",
           "value": "bdns"
+        },
+        {
+          "type": "STRING",
+          "value": "bnan"
+        },
+        {
+          "type": "STRING",
+          "value": "bnan"
+        },
+        {
+          "type": "STRING",
+          "value": "brnan"
+        },
+        {
+          "type": "STRING",
+          "value": "lbn"
+        },
+        {
+          "type": "STRING",
+          "value": "lbns"
+        },
+        {
+          "type": "STRING",
+          "value": "lbs"
+        },
+        {
+          "type": "STRING",
+          "value": "lr"
+        },
+        {
+          "type": "STRING",
+          "value": "not"
+        },
+        {
+          "type": "STRING",
+          "value": "sbn"
+        },
+        {
+          "type": "STRING",
+          "value": "sbs"
+        },
+        {
+          "type": "STRING",
+          "value": "sla"
+        },
+        {
+          "type": "STRING",
+          "value": "sll"
+        },
+        {
+          "type": "STRING",
+          "value": "sra"
+        },
+        {
+          "type": "STRING",
+          "value": "srl"
+        },
+        {
+          "type": "STRING",
+          "value": "snan"
+        },
+        {
+          "type": "STRING",
+          "value": "snanz"
+        },
+        {
+          "type": "STRING",
+          "value": "ss"
         },
         {
           "type": "STRING",

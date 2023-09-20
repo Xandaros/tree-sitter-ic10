@@ -56,14 +56,29 @@ module.exports = grammar({
             )
         ))),
 
-        number: $ => token(seq(
-            optional('-'),
-            /[0-9]+/,
-            optional(seq(
-                '.',
-                /[0-9]+/
-            ))
-        )),
+        _constant: $ => choice(
+            'nan',
+            'pinf',
+            'ninf',
+            'pi',
+            'deg2rad',
+            'rad2deg',
+            'epsilon',
+        ),
+
+        number: $ => choice(
+            token(
+                seq(
+                    optional('-'),
+                    /[0-9]+/,
+                    optional(seq(
+                        '.',
+                        /[0-9]+/
+                    ))
+                ),
+            ),
+            $._constant,
+        ),
 
         operation: $ => choice(
             'l',
@@ -100,6 +115,23 @@ module.exports = grammar({
             'bgtz',
             'bdse',
             'bdns',
+            'bnan',
+            'bnan',
+            'brnan',
+            'lbn',
+            'lbns',
+            'lbs',
+            'lr',
+            'not',
+            'sbn',
+            'sbs',
+            'sla',
+            'sll',
+            'sra',
+            'srl',
+            'snan',
+            'snanz',
+            'ss',
             'beq',
             'bne',
             'bap',

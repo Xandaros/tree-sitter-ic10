@@ -82,6 +82,11 @@
     "fields": {}
   },
   {
+    "type": "number",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "operand",
     "named": true,
     "fields": {},
@@ -312,6 +317,10 @@
     "named": false
   },
   {
+    "type": "bnan",
+    "named": false
+  },
+  {
     "type": "bnaz",
     "named": false
   },
@@ -396,6 +405,10 @@
     "named": false
   },
   {
+    "type": "brnan",
+    "named": false
+  },
+  {
     "type": "brnaz",
     "named": false
   },
@@ -420,11 +433,19 @@
     "named": false
   },
   {
+    "type": "deg2rad",
+    "named": false
+  },
+  {
     "type": "device",
     "named": true
   },
   {
     "type": "div",
+    "named": false
+  },
+  {
+    "type": "epsilon",
     "named": false
   },
   {
@@ -472,6 +493,18 @@
     "named": false
   },
   {
+    "type": "lbn",
+    "named": false
+  },
+  {
+    "type": "lbns",
+    "named": false
+  },
+  {
+    "type": "lbs",
+    "named": false
+  },
+  {
     "type": "log",
     "named": false
   },
@@ -508,12 +541,20 @@
     "named": false
   },
   {
+    "type": "nan",
+    "named": false
+  },
+  {
+    "type": "ninf",
+    "named": false
+  },
+  {
     "type": "nor",
     "named": false
   },
   {
-    "type": "number",
-    "named": true
+    "type": "not",
+    "named": false
   },
   {
     "type": "or",
@@ -524,11 +565,23 @@
     "named": false
   },
   {
+    "type": "pi",
+    "named": false
+  },
+  {
+    "type": "pinf",
+    "named": false
+  },
+  {
     "type": "pop",
     "named": false
   },
   {
     "type": "push",
+    "named": false
+  },
+  {
+    "type": "rad2deg",
     "named": false
   },
   {
@@ -557,6 +610,14 @@
   },
   {
     "type": "sb",
+    "named": false
+  },
+  {
+    "type": "sbn",
+    "named": false
+  },
+  {
+    "type": "sbs",
     "named": false
   },
   {
@@ -600,6 +661,10 @@
     "named": false
   },
   {
+    "type": "sla",
+    "named": false
+  },
+  {
     "type": "sle",
     "named": false
   },
@@ -612,6 +677,10 @@
     "named": false
   },
   {
+    "type": "sll",
+    "named": false
+  },
+  {
     "type": "slt",
     "named": false
   },
@@ -621,6 +690,14 @@
   },
   {
     "type": "sna",
+    "named": false
+  },
+  {
+    "type": "snan",
+    "named": false
+  },
+  {
+    "type": "snanz",
     "named": false
   },
   {
@@ -637,6 +714,18 @@
   },
   {
     "type": "sqrt",
+    "named": false
+  },
+  {
+    "type": "sra",
+    "named": false
+  },
+  {
+    "type": "srl",
+    "named": false
+  },
+  {
+    "type": "ss",
     "named": false
   },
   {
