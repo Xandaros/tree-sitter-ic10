@@ -1,9 +1,10 @@
 ================================================================================
-Hash preproc macro
+Binary and hexadecimal numbers
 ================================================================================
 
-move r0 HASH("")
-move r0 HASH("asd")
+move r0 %1101
+move r0 %10_01
+move r0 $Ab_f2
 
 --------------------------------------------------------------------------------
 
@@ -17,9 +18,7 @@ move r0 HASH("asd")
         (operand
           (register))
         (operand
-          (number
-            (hash_preproc
-              (preproc_string)))))
+          (number)))
       (newline))
     (line
       (instruction
@@ -27,7 +26,13 @@ move r0 HASH("asd")
         (operand
           (register))
         (operand
-          (number
-            (hash_preproc
-              (preproc_string)))))
+          (number)))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (number)))
       (newline))))

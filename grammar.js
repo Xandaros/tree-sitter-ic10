@@ -88,13 +88,17 @@ module.exports = grammar({
 
         number: $ => choice(
             token(
-                seq(
-                    optional('-'),
-                    /[0-9]+/,
-                    optional(seq(
-                        '.',
-                        /[0-9]+/
-                    ))
+                choice(
+                    seq(
+                        optional('-'),
+                        /[0-9]+/,
+                        optional(seq(
+                            '.',
+                            /[0-9]+/
+                        ))
+                    ),
+                    seq("%", /[01_]+/),
+                    seq("$", /[0-9a-fA-F_]+/),
                 ),
             ),
             $._constant,
