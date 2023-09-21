@@ -1,0 +1,29 @@
+================================================================================
+Constants
+================================================================================
+
+move r0 nan
+move r0 5
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (program
+    (line
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (number)))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (number)))
+      (newline))))

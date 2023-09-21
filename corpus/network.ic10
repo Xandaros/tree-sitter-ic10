@@ -1,0 +1,49 @@
+================================================================================
+Constants
+================================================================================
+
+l r0 d0 Channel0
+l r0 d0:0 Channel0
+l r0 d0:99 Channel7
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (program
+    (line
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (device_spec
+            (device)))
+        (operand
+          (logictype)))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (device_spec
+            (device)
+            (network_index)))
+        (operand
+          (logictype)))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (device_spec
+            (device)
+            (network_index)))
+        (operand
+          (logictype)))
+      (newline))))
