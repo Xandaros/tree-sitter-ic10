@@ -31,7 +31,7 @@ module.exports = grammar({
             ))
         ),
 
-        operand: $ => choice($.register, $.device, $.number, $.logictype, $.identifier),
+        operand: $ => choice($.register, $.device_spec, $.number, $.logictype, $.identifier),
 
         identifier: $ => /[a-zA-Z_.][a-zA-Z0-9_.]*/,
 
@@ -44,6 +44,18 @@ module.exports = grammar({
             )
         ))),
 
+        network_index: $ => /[0-9]+/,
+
+        device_spec: $ => seq(
+            $.device,
+            optional(
+                seq(
+                    ":",
+                    $.network_index,
+                )
+            )
+        ),
+
         device: $ => token(prec(5,seq(
             'd',
             choice(
@@ -53,7 +65,7 @@ module.exports = grammar({
                     repeat1('r'),
                     /[0-9]|1[0-5]/
                 )
-            )
+            ),
         ))),
 
         _constant: $ => choice(
@@ -416,6 +428,15 @@ module.exports = grammar({
             'Sum',
             'Minimum',
             'Maximum',
+
+            'Channel0',
+            'Channel1',
+            'Channel2',
+            'Channel3',
+            'Channel4',
+            'Channel5',
+            'Channel6',
+            'Channel7',
         )))
     }
 });

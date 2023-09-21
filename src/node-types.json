@@ -5,6 +5,25 @@
     "fields": {}
   },
   {
+    "type": "device_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "device",
+          "named": true
+        },
+        {
+          "type": "network_index",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "hash_preproc",
     "named": true,
     "fields": {
@@ -121,7 +140,7 @@
       "required": true,
       "types": [
         {
-          "type": "device",
+          "type": "device_spec",
           "named": true
         },
         {
@@ -577,6 +596,10 @@
   {
     "type": "nan",
     "named": false
+  },
+  {
+    "type": "network_index",
+    "named": true
   },
   {
     "type": "ninf",

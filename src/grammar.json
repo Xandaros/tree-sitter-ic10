@@ -146,7 +146,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "device"
+          "name": "device_spec"
         },
         {
           "type": "SYMBOL",
@@ -201,6 +201,40 @@
           ]
         }
       }
+    },
+    "network_index": {
+      "type": "PATTERN",
+      "value": "[0-9]+"
+    },
+    "device_spec": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "device"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ":"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "network_index"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
     },
     "device": {
       "type": "TOKEN",
@@ -1659,6 +1693,38 @@
             {
               "type": "STRING",
               "value": "Maximum"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel0"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel1"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel2"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel3"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel4"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel5"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel6"
+            },
+            {
+              "type": "STRING",
+              "value": "Channel7"
             }
           ]
         }
