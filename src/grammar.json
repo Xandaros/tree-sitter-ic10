@@ -280,6 +280,31 @@
         }
       ]
     },
+    "preproc_string": {
+      "type": "PATTERN",
+      "value": "[^\"]*"
+    },
+    "hash_preproc": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "HASH(\""
+        },
+        {
+          "type": "FIELD",
+          "name": "string",
+          "content": {
+            "type": "SYMBOL",
+            "name": "preproc_string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "\")"
+        }
+      ]
+    },
     "number": {
       "type": "CHOICE",
       "members": [
@@ -331,6 +356,10 @@
         {
           "type": "SYMBOL",
           "name": "_constant"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "hash_preproc"
         }
       ]
     },

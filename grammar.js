@@ -66,6 +66,14 @@ module.exports = grammar({
             'epsilon',
         ),
 
+        preproc_string: $ => /[^"]*/,
+
+        hash_preproc: $ => seq(
+            "HASH(\"",
+            field('string', $.preproc_string),
+            "\")",
+        ),
+
         number: $ => choice(
             token(
                 seq(
@@ -78,6 +86,7 @@ module.exports = grammar({
                 ),
             ),
             $._constant,
+            $.hash_preproc
         ),
 
         operation: $ => choice(

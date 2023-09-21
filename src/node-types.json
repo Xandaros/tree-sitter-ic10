@@ -5,6 +5,22 @@
     "fields": {}
   },
   {
+    "type": "hash_preproc",
+    "named": true,
+    "fields": {
+      "string": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "preproc_string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "instruction",
     "named": true,
     "fields": {
@@ -84,7 +100,17 @@
   {
     "type": "number",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "hash_preproc",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "operand",
@@ -165,7 +191,15 @@
     "named": false
   },
   {
+    "type": "\")",
+    "named": false
+  },
+  {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "HASH(\"",
     "named": false
   },
   {
@@ -575,6 +609,10 @@
   {
     "type": "pop",
     "named": false
+  },
+  {
+    "type": "preproc_string",
+    "named": true
   },
   {
     "type": "push",
