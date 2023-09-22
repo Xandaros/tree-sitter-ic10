@@ -316,7 +316,7 @@
     },
     "preproc_string": {
       "type": "PATTERN",
-      "value": "[^\"]*"
+      "value": "[^\"\\n]*"
     },
     "hash_preproc": {
       "type": "SEQ",

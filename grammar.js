@@ -78,7 +78,7 @@ module.exports = grammar({
             'epsilon',
         ),
 
-        preproc_string: $ => /[^"]*/,
+        preproc_string: $ => /[^"\n]*/,
 
         hash_preproc: $ => seq(
             "HASH(\"",

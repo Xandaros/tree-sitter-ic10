@@ -4,6 +4,7 @@ Hash preproc macro
 
 move r0 HASH("")
 move r0 HASH("asd")
+move r0 HASH("asd
 
 --------------------------------------------------------------------------------
 
@@ -30,4 +31,15 @@ move r0 HASH("asd")
           (number
             (hash_preproc
               (preproc_string)))))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (register))
+        (operand
+          (number
+            (hash_preproc
+              (preproc_string)
+              (MISSING "")))))
       (newline))))
