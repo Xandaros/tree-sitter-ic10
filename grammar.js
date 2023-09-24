@@ -441,6 +441,10 @@ module.exports = grammar({
             'Channel5',
             'Channel6',
             'Channel7',
+
+            'Contents',
+            'Required',
+            'Recipe',
         )))
     }
 });

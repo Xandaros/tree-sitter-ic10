@@ -1756,6 +1756,18 @@
             {
               "type": "STRING",
               "value": "Channel7"
+            },
+            {
+              "type": "STRING",
+              "value": "Contents"
+            },
+            {
+              "type": "STRING",
+              "value": "Required"
+            },
+            {
+              "type": "STRING",
+              "value": "Recipe"
             }
           ]
         }
