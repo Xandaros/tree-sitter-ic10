@@ -47,7 +47,7 @@ module.exports = grammar({
             'sp',
             seq(
                 repeat1('r'),
-                /[0-9]|1[0-5]/
+                /[0-9]|1[0-7]/
             )
         ))),
 
@@ -70,7 +70,7 @@ module.exports = grammar({
                 /[0-5]/,
                 seq(
                     repeat1('r'),
-                    /[0-9]|1[0-5]/
+                    /[0-9]|1[0-7]/
                 )
             ),
         ))),

@@ -2272,7 +2272,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 164:
       ACCEPT_TOKEN(sym_register);
-      if (('0' <= lookahead && lookahead <= '5')) ADVANCE(168);
+      if (('0' <= lookahead && lookahead <= '7')) ADVANCE(168);
       END_STATE();
     case 165:
       ACCEPT_TOKEN(sym_register);
@@ -2786,7 +2786,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 320:
       ACCEPT_TOKEN(sym_device);
-      if (('0' <= lookahead && lookahead <= '5')) ADVANCE(135);
+      if (('0' <= lookahead && lookahead <= '7')) ADVANCE(135);
       END_STATE();
     case 321:
       if (lookahead == 'i') ADVANCE(517);
