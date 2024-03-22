@@ -1,0 +1,7 @@
+nan
+pinf
+ninf
+pi
+deg2rad
+rad2deg
+epsilon

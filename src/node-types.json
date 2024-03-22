@@ -5,6 +5,11 @@
     "fields": {}
   },
   {
+    "type": "constant",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "device_spec",
     "named": true,
     "fields": {},
@@ -124,6 +129,14 @@
       "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "enum",
+          "named": true
+        },
         {
           "type": "hash_preproc",
           "named": true
@@ -247,6 +260,10 @@
   },
   {
     "type": "atan",
+    "named": false
+  },
+  {
+    "type": "atan2",
     "named": false
   },
   {
@@ -498,6 +515,10 @@
     "named": false
   },
   {
+    "type": "enum",
+    "named": true
+  },
+  {
     "type": "epsilon",
     "named": false
   },
@@ -507,6 +528,14 @@
   },
   {
     "type": "floor",
+    "named": false
+  },
+  {
+    "type": "get",
+    "named": false
+  },
+  {
+    "type": "getd",
     "named": false
   },
   {
@@ -555,6 +584,10 @@
   },
   {
     "type": "lbs",
+    "named": false
+  },
+  {
+    "type": "ld",
     "named": false
   },
   {
@@ -630,6 +663,10 @@
     "named": false
   },
   {
+    "type": "poke",
+    "named": false
+  },
+  {
     "type": "pop",
     "named": false
   },
@@ -639,6 +676,14 @@
   },
   {
     "type": "push",
+    "named": false
+  },
+  {
+    "type": "put",
+    "named": false
+  },
+  {
+    "type": "putd",
     "named": false
   },
   {
@@ -679,6 +724,10 @@
   },
   {
     "type": "sbs",
+    "named": false
+  },
+  {
+    "type": "sd",
     "named": false
   },
   {
