@@ -1,1 +1,10 @@
 target/
+build/
+node_modules/
+parser.obj
+parser.lib
+parser.exp
+pyproject.toml
+setup.py
+Makefile
+Package.swift

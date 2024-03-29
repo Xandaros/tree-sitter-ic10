@@ -1,5 +1,10 @@
 [
   {
+    "type": "batchmode",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "comment",
     "named": true,
     "fields": {}
@@ -117,6 +122,43 @@
     }
   },
   {
+    "type": "logicable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "batchmode",
+          "named": true
+        },
+        {
+          "type": "logicslottype",
+          "named": true
+        },
+        {
+          "type": "logictype",
+          "named": true
+        },
+        {
+          "type": "reagentmode",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "logicslottype",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "logictype",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "newline",
     "named": true,
     "fields": {}
@@ -161,7 +203,7 @@
           "named": true
         },
         {
-          "type": "logictype",
+          "type": "logicable",
           "named": true
         },
         {
@@ -194,6 +236,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "reagentmode",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -231,7 +278,1191 @@
     "named": false
   },
   {
+    "type": "Acceleration",
+    "named": false
+  },
+  {
+    "type": "Activate",
+    "named": false
+  },
+  {
+    "type": "AirRelease",
+    "named": false
+  },
+  {
+    "type": "AlignmentError",
+    "named": false
+  },
+  {
+    "type": "Apex",
+    "named": false
+  },
+  {
+    "type": "AutoLand",
+    "named": false
+  },
+  {
+    "type": "AutoShutOff",
+    "named": false
+  },
+  {
+    "type": "Average",
+    "named": false
+  },
+  {
+    "type": "Bpm",
+    "named": false
+  },
+  {
+    "type": "BurnTimeRemaining",
+    "named": false
+  },
+  {
+    "type": "Bypass",
+    "named": false
+  },
+  {
+    "type": "CelestialHash",
+    "named": false
+  },
+  {
+    "type": "CelestialParentHash",
+    "named": false
+  },
+  {
+    "type": "Channel",
+    "named": false
+  },
+  {
+    "type": "Channel0",
+    "named": false
+  },
+  {
+    "type": "Channel1",
+    "named": false
+  },
+  {
+    "type": "Channel2",
+    "named": false
+  },
+  {
+    "type": "Channel3",
+    "named": false
+  },
+  {
+    "type": "Channel4",
+    "named": false
+  },
+  {
+    "type": "Channel5",
+    "named": false
+  },
+  {
+    "type": "Channel6",
+    "named": false
+  },
+  {
+    "type": "Channel7",
+    "named": false
+  },
+  {
+    "type": "Charge",
+    "named": false
+  },
+  {
+    "type": "ChargeRatio",
+    "named": false
+  },
+  {
+    "type": "Chart",
+    "named": false
+  },
+  {
+    "type": "ChartedNavPoints",
+    "named": false
+  },
+  {
+    "type": "Class",
+    "named": false
+  },
+  {
+    "type": "ClearMemory",
+    "named": false
+  },
+  {
+    "type": "CollectableGoods",
+    "named": false
+  },
+  {
+    "type": "Color",
+    "named": false
+  },
+  {
+    "type": "Combustion",
+    "named": false
+  },
+  {
+    "type": "CombustionInput",
+    "named": false
+  },
+  {
+    "type": "CombustionInput2",
+    "named": false
+  },
+  {
+    "type": "CombustionLimiter",
+    "named": false
+  },
+  {
+    "type": "CombustionOutput",
+    "named": false
+  },
+  {
+    "type": "CombustionOutput2",
+    "named": false
+  },
+  {
+    "type": "CompletionRatio",
+    "named": false
+  },
+  {
+    "type": "ContactTypeId",
+    "named": false
+  },
+  {
+    "type": "Contents",
+    "named": false
+  },
+  {
+    "type": "CurrentCode",
+    "named": false
+  },
+  {
+    "type": "CurrentResearchPodType",
+    "named": false
+  },
+  {
+    "type": "Damage",
+    "named": false
+  },
+  {
+    "type": "Density",
+    "named": false
+  },
+  {
+    "type": "DestinationCode",
+    "named": false
+  },
+  {
+    "type": "Discover",
+    "named": false
+  },
+  {
+    "type": "DistanceAu",
+    "named": false
+  },
+  {
+    "type": "DistanceKm",
+    "named": false
+  },
+  {
+    "type": "DrillCondition",
+    "named": false
+  },
+  {
+    "type": "DryMass",
+    "named": false
+  },
+  {
+    "type": "Eccentricity",
+    "named": false
+  },
+  {
+    "type": "Efficiency",
+    "named": false
+  },
+  {
+    "type": "ElevatorLevel",
+    "named": false
+  },
+  {
+    "type": "ElevatorSpeed",
+    "named": false
+  },
+  {
+    "type": "EntityState",
+    "named": false
+  },
+  {
+    "type": "EnvironmentEfficiency",
+    "named": false
+  },
+  {
+    "type": "Error",
+    "named": false
+  },
+  {
+    "type": "ExhaustVelocity",
+    "named": false
+  },
+  {
+    "type": "ExportCount",
+    "named": false
+  },
+  {
+    "type": "ExportQuantity",
+    "named": false
+  },
+  {
+    "type": "ExportSlotHash",
+    "named": false
+  },
+  {
+    "type": "ExportSlotOccupant",
+    "named": false
+  },
+  {
+    "type": "FilterType",
+    "named": false
+  },
+  {
+    "type": "Filtration",
+    "named": false
+  },
+  {
+    "type": "FlightControlRule",
+    "named": false
+  },
+  {
+    "type": "Flush",
+    "named": false
+  },
+  {
+    "type": "ForceWrite",
+    "named": false
+  },
+  {
+    "type": "ForwardX",
+    "named": false
+  },
+  {
+    "type": "ForwardY",
+    "named": false
+  },
+  {
+    "type": "ForwardZ",
+    "named": false
+  },
+  {
+    "type": "Fuel",
+    "named": false
+  },
+  {
+    "type": "Growth",
+    "named": false
+  },
+  {
     "type": "HASH(\"",
+    "named": false
+  },
+  {
+    "type": "Harvest",
+    "named": false
+  },
+  {
+    "type": "Health",
+    "named": false
+  },
+  {
+    "type": "Horizontal",
+    "named": false
+  },
+  {
+    "type": "HorizontalRatio",
+    "named": false
+  },
+  {
+    "type": "Idle",
+    "named": false
+  },
+  {
+    "type": "ImportCount",
+    "named": false
+  },
+  {
+    "type": "ImportQuantity",
+    "named": false
+  },
+  {
+    "type": "ImportSlotHash",
+    "named": false
+  },
+  {
+    "type": "ImportSlotOccupant",
+    "named": false
+  },
+  {
+    "type": "Inclination",
+    "named": false
+  },
+  {
+    "type": "Index",
+    "named": false
+  },
+  {
+    "type": "InterrogationProgress",
+    "named": false
+  },
+  {
+    "type": "LineNumber",
+    "named": false
+  },
+  {
+    "type": "Lock",
+    "named": false
+  },
+  {
+    "type": "ManualResearchRequiredPod",
+    "named": false
+  },
+  {
+    "type": "Mass",
+    "named": false
+  },
+  {
+    "type": "Mature",
+    "named": false
+  },
+  {
+    "type": "MaxQuantity",
+    "named": false
+  },
+  {
+    "type": "Maximum",
+    "named": false
+  },
+  {
+    "type": "MinWattsToContact",
+    "named": false
+  },
+  {
+    "type": "MineablesInQueue",
+    "named": false
+  },
+  {
+    "type": "MineablesInVicinity",
+    "named": false
+  },
+  {
+    "type": "MinedQuantity",
+    "named": false
+  },
+  {
+    "type": "Minimum",
+    "named": false
+  },
+  {
+    "type": "MinimumWattsToContact",
+    "named": false
+  },
+  {
+    "type": "Mode",
+    "named": false
+  },
+  {
+    "type": "NavPoints",
+    "named": false
+  },
+  {
+    "type": "NextWeatherEventTime",
+    "named": false
+  },
+  {
+    "type": "None",
+    "named": false
+  },
+  {
+    "type": "OccupantHash",
+    "named": false
+  },
+  {
+    "type": "Occupied",
+    "named": false
+  },
+  {
+    "type": "On",
+    "named": false
+  },
+  {
+    "type": "Open",
+    "named": false
+  },
+  {
+    "type": "OperationalTemperatureEfficiency",
+    "named": false
+  },
+  {
+    "type": "OrbitPeriod",
+    "named": false
+  },
+  {
+    "type": "Orientation",
+    "named": false
+  },
+  {
+    "type": "Output",
+    "named": false
+  },
+  {
+    "type": "OverShootTarget",
+    "named": false
+  },
+  {
+    "type": "PassedMoles",
+    "named": false
+  },
+  {
+    "type": "Plant",
+    "named": false
+  },
+  {
+    "type": "PlantEfficiency1",
+    "named": false
+  },
+  {
+    "type": "PlantEfficiency2",
+    "named": false
+  },
+  {
+    "type": "PlantEfficiency3",
+    "named": false
+  },
+  {
+    "type": "PlantEfficiency4",
+    "named": false
+  },
+  {
+    "type": "PlantGrowth1",
+    "named": false
+  },
+  {
+    "type": "PlantGrowth2",
+    "named": false
+  },
+  {
+    "type": "PlantGrowth3",
+    "named": false
+  },
+  {
+    "type": "PlantGrowth4",
+    "named": false
+  },
+  {
+    "type": "PlantHash1",
+    "named": false
+  },
+  {
+    "type": "PlantHash2",
+    "named": false
+  },
+  {
+    "type": "PlantHash3",
+    "named": false
+  },
+  {
+    "type": "PlantHash4",
+    "named": false
+  },
+  {
+    "type": "PlantHealth1",
+    "named": false
+  },
+  {
+    "type": "PlantHealth2",
+    "named": false
+  },
+  {
+    "type": "PlantHealth3",
+    "named": false
+  },
+  {
+    "type": "PlantHealth4",
+    "named": false
+  },
+  {
+    "type": "PositionX",
+    "named": false
+  },
+  {
+    "type": "PositionY",
+    "named": false
+  },
+  {
+    "type": "PositionZ",
+    "named": false
+  },
+  {
+    "type": "Power",
+    "named": false
+  },
+  {
+    "type": "PowerActual",
+    "named": false
+  },
+  {
+    "type": "PowerGeneration",
+    "named": false
+  },
+  {
+    "type": "PowerPotential",
+    "named": false
+  },
+  {
+    "type": "PowerRequired",
+    "named": false
+  },
+  {
+    "type": "PrefabHash",
+    "named": false
+  },
+  {
+    "type": "Pressure",
+    "named": false
+  },
+  {
+    "type": "PressureAir",
+    "named": false
+  },
+  {
+    "type": "PressureEfficiency",
+    "named": false
+  },
+  {
+    "type": "PressureExternal",
+    "named": false
+  },
+  {
+    "type": "PressureInput",
+    "named": false
+  },
+  {
+    "type": "PressureInput2",
+    "named": false
+  },
+  {
+    "type": "PressureInternal",
+    "named": false
+  },
+  {
+    "type": "PressureOutput",
+    "named": false
+  },
+  {
+    "type": "PressureOutput2",
+    "named": false
+  },
+  {
+    "type": "PressureSetting",
+    "named": false
+  },
+  {
+    "type": "PressureWaste",
+    "named": false
+  },
+  {
+    "type": "Progress",
+    "named": false
+  },
+  {
+    "type": "Quantity",
+    "named": false
+  },
+  {
+    "type": "Ratio",
+    "named": false
+  },
+  {
+    "type": "RatioCarbonDioxide",
+    "named": false
+  },
+  {
+    "type": "RatioCarbonDioxideInput",
+    "named": false
+  },
+  {
+    "type": "RatioCarbonDioxideInput2",
+    "named": false
+  },
+  {
+    "type": "RatioCarbonDioxideOutput",
+    "named": false
+  },
+  {
+    "type": "RatioCarbonDioxideOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioHydrogen",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidCarbonDioxide",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidCarbonDioxideInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidCarbonDioxideInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidCarbonDioxideOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidCarbonDioxideOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidHydrogen",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrogen",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrogenInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrogenInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrogenOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrogenOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrousOxide",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrousOxideInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrousOxideInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrousOxideOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidNitrousOxideOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidOxygen",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidOxygenInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidOxygenInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidOxygenOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidOxygenOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidPollutant",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidPollutantInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidPollutantInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidPollutantOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidPollutantOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidVolatiles",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidVolatilesInput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidVolatilesInput2",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidVolatilesOutput",
+    "named": false
+  },
+  {
+    "type": "RatioLiquidVolatilesOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioNitrogen",
+    "named": false
+  },
+  {
+    "type": "RatioNitrogenInput",
+    "named": false
+  },
+  {
+    "type": "RatioNitrogenInput2",
+    "named": false
+  },
+  {
+    "type": "RatioNitrogenOutput",
+    "named": false
+  },
+  {
+    "type": "RatioNitrogenOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioNitrousOxide",
+    "named": false
+  },
+  {
+    "type": "RatioNitrousOxideInput",
+    "named": false
+  },
+  {
+    "type": "RatioNitrousOxideInput2",
+    "named": false
+  },
+  {
+    "type": "RatioNitrousOxideOutput",
+    "named": false
+  },
+  {
+    "type": "RatioNitrousOxideOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioOxygen",
+    "named": false
+  },
+  {
+    "type": "RatioOxygenInput",
+    "named": false
+  },
+  {
+    "type": "RatioOxygenInput2",
+    "named": false
+  },
+  {
+    "type": "RatioOxygenOutput",
+    "named": false
+  },
+  {
+    "type": "RatioOxygenOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioPollutant",
+    "named": false
+  },
+  {
+    "type": "RatioPollutantInput",
+    "named": false
+  },
+  {
+    "type": "RatioPollutantInput2",
+    "named": false
+  },
+  {
+    "type": "RatioPollutantOutput",
+    "named": false
+  },
+  {
+    "type": "RatioPollutantOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioPollutedWater",
+    "named": false
+  },
+  {
+    "type": "RatioSteam",
+    "named": false
+  },
+  {
+    "type": "RatioSteamInput",
+    "named": false
+  },
+  {
+    "type": "RatioSteamInput2",
+    "named": false
+  },
+  {
+    "type": "RatioSteamOutput",
+    "named": false
+  },
+  {
+    "type": "RatioSteamOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioVolatiles",
+    "named": false
+  },
+  {
+    "type": "RatioVolatilesInput",
+    "named": false
+  },
+  {
+    "type": "RatioVolatilesInput2",
+    "named": false
+  },
+  {
+    "type": "RatioVolatilesOutput",
+    "named": false
+  },
+  {
+    "type": "RatioVolatilesOutput2",
+    "named": false
+  },
+  {
+    "type": "RatioWater",
+    "named": false
+  },
+  {
+    "type": "RatioWaterInput",
+    "named": false
+  },
+  {
+    "type": "RatioWaterInput2",
+    "named": false
+  },
+  {
+    "type": "RatioWaterOutput",
+    "named": false
+  },
+  {
+    "type": "RatioWaterOutput2",
+    "named": false
+  },
+  {
+    "type": "ReEntryAltitude",
+    "named": false
+  },
+  {
+    "type": "Reagents",
+    "named": false
+  },
+  {
+    "type": "Recipe",
+    "named": false
+  },
+  {
+    "type": "RecipeHash",
+    "named": false
+  },
+  {
+    "type": "ReferenceId",
+    "named": false
+  },
+  {
+    "type": "RequestHash",
+    "named": false
+  },
+  {
+    "type": "Required",
+    "named": false
+  },
+  {
+    "type": "RequiredPower",
+    "named": false
+  },
+  {
+    "type": "ReturnFuelCost",
+    "named": false
+  },
+  {
+    "type": "Richness",
+    "named": false
+  },
+  {
+    "type": "Rpm",
+    "named": false
+  },
+  {
+    "type": "Seeding",
+    "named": false
+  },
+  {
+    "type": "SemiMajorAxis",
+    "named": false
+  },
+  {
+    "type": "Setting",
+    "named": false
+  },
+  {
+    "type": "SettingInput",
+    "named": false
+  },
+  {
+    "type": "SettingInputHash",
+    "named": false
+  },
+  {
+    "type": "SettingOutput",
+    "named": false
+  },
+  {
+    "type": "SettingOutputHash",
+    "named": false
+  },
+  {
+    "type": "SignalID",
+    "named": false
+  },
+  {
+    "type": "SignalStrength",
+    "named": false
+  },
+  {
+    "type": "Sites",
+    "named": false
+  },
+  {
+    "type": "Size",
+    "named": false
+  },
+  {
+    "type": "SizeX",
+    "named": false
+  },
+  {
+    "type": "SizeY",
+    "named": false
+  },
+  {
+    "type": "SizeZ",
+    "named": false
+  },
+  {
+    "type": "SolarAngle",
+    "named": false
+  },
+  {
+    "type": "SolarConstant",
+    "named": false
+  },
+  {
+    "type": "SolarIrradiance",
+    "named": false
+  },
+  {
+    "type": "SortingClass",
+    "named": false
+  },
+  {
+    "type": "SoundAlert",
+    "named": false
+  },
+  {
+    "type": "Stress",
+    "named": false
+  },
+  {
+    "type": "Sum",
+    "named": false
+  },
+  {
+    "type": "Survey",
+    "named": false
+  },
+  {
+    "type": "TargetPadIndex",
+    "named": false
+  },
+  {
+    "type": "TargetX",
+    "named": false
+  },
+  {
+    "type": "TargetY",
+    "named": false
+  },
+  {
+    "type": "TargetZ",
+    "named": false
+  },
+  {
+    "type": "Temperature",
+    "named": false
+  },
+  {
+    "type": "TemperatureDifferentialEfficiency",
+    "named": false
+  },
+  {
+    "type": "TemperatureExternal",
+    "named": false
+  },
+  {
+    "type": "TemperatureInput",
+    "named": false
+  },
+  {
+    "type": "TemperatureInput2",
+    "named": false
+  },
+  {
+    "type": "TemperatureOutput",
+    "named": false
+  },
+  {
+    "type": "TemperatureOutput2",
+    "named": false
+  },
+  {
+    "type": "TemperatureSetting",
+    "named": false
+  },
+  {
+    "type": "Throttle",
+    "named": false
+  },
+  {
+    "type": "Thrust",
+    "named": false
+  },
+  {
+    "type": "ThrustToWeight",
+    "named": false
+  },
+  {
+    "type": "Time",
+    "named": false
+  },
+  {
+    "type": "TimeToDestination",
+    "named": false
+  },
+  {
+    "type": "TotalContents",
+    "named": false
+  },
+  {
+    "type": "TotalMoles",
+    "named": false
+  },
+  {
+    "type": "TotalMolesInput",
+    "named": false
+  },
+  {
+    "type": "TotalMolesInput2",
+    "named": false
+  },
+  {
+    "type": "TotalMolesOutput",
+    "named": false
+  },
+  {
+    "type": "TotalMolesOutput2",
+    "named": false
+  },
+  {
+    "type": "TotalQuantity",
+    "named": false
+  },
+  {
+    "type": "TrueAnomaly",
+    "named": false
+  },
+  {
+    "type": "Unknown",
+    "named": false
+  },
+  {
+    "type": "VelocityMagnitude",
+    "named": false
+  },
+  {
+    "type": "VelocityRelativeX",
+    "named": false
+  },
+  {
+    "type": "VelocityRelativeY",
+    "named": false
+  },
+  {
+    "type": "VelocityRelativeZ",
+    "named": false
+  },
+  {
+    "type": "VelocityX",
+    "named": false
+  },
+  {
+    "type": "VelocityY",
+    "named": false
+  },
+  {
+    "type": "VelocityZ",
+    "named": false
+  },
+  {
+    "type": "Vertical",
+    "named": false
+  },
+  {
+    "type": "VerticalRatio",
+    "named": false
+  },
+  {
+    "type": "Volume",
+    "named": false
+  },
+  {
+    "type": "VolumeOfLiquid",
+    "named": false
+  },
+  {
+    "type": "WattsReachingContact",
+    "named": false
+  },
+  {
+    "type": "Weight",
+    "named": false
+  },
+  {
+    "type": "WorkingGasEfficiency",
     "named": false
   },
   {
@@ -593,10 +1824,6 @@
   {
     "type": "log",
     "named": false
-  },
-  {
-    "type": "logictype",
-    "named": true
   },
   {
     "type": "lr",

@@ -1,8 +1,11 @@
 const fs = require('fs')
-const ops = fs.readFileSync('./operations.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
-const constants = fs.readFileSync('./constants.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
-const logictypes = fs.readFileSync('./logictypes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
-const enums = fs.readFileSync('./enums.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const ops = fs.readFileSync('./data/operations.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const constants = fs.readFileSync('./data/constants.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const logictypes = fs.readFileSync('./data/logictypes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const slotlogictypes = fs.readFileSync('./data/slotlogictypes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const batchmodes = fs.readFileSync('./data/batchmodes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const reagentmodes = fs.readFileSync('./data/reagentmodes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const enums = fs.readFileSync('./data/enums.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
 
 
 module.exports = grammar({
@@ -38,7 +41,7 @@ module.exports = grammar({
             ))
         ),
 
-        operand: $ => choice($.register, $.device_spec, $.number, $.logictype, $.identifier),
+        operand: $ => choice($.register, $.device_spec, $.number, $.logicable, $.identifier),
 
         identifier: $ => /[a-zA-Z_.][a-zA-Z0-9_.]*/,
 
@@ -111,9 +114,25 @@ module.exports = grammar({
             ...ops
         ),
 
-        logictype: $ => token(prec(5,choice(
+        logicable: $ => prec(5,choice(
+            $.logictype, $.logicslottype, $.batchmode, $.reagentmode
+        )),
+
+        logictype: $ => prec(6,choice(
             ...logictypes
-        ))),
+        )),
+
+        logicslottype: $ => choice(
+            ...slotlogictypes
+        ),
+
+        batchmode: $ => choice(
+            ...batchmodes
+        ),
+
+        reagentmode: $ => choice(
+            ...reagentmodes
+        ),
 
         enum: $ => token(prec(5,choice(
             ...enums

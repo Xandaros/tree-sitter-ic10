@@ -73,7 +73,8 @@ def extract_data(install_path, data_path: Path, language: str):
         if match := logic_slot_type.match(key):
             slotlogictypes.add(match.group(1))
         if match := script_command.match(key):
-            operations.add(f"{match.group(1).lower()}")
+            if not match.group(1).lower() == "command":
+                operations.add(f"{match.group(1).lower()}")
         if match := script_desc.match(key):
             operations.add(f"{match.group(1).lower()}")
 
@@ -104,7 +105,7 @@ def extract_data(install_path, data_path: Path, language: str):
     batchmodes = set()
     batchmodes_path = Path("data") / "batchmodes.txt"
     if batchmodes_path.exists():
-        with().open("r") as f:
+        with batchmodes_path.open("r") as f:
             for line in f.readlines():
                 name = line.strip()
                 if name:
