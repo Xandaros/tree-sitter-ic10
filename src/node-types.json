@@ -134,6 +134,10 @@
           "named": true
         },
         {
+          "type": "deprecated",
+          "named": true
+        },
+        {
           "type": "logicslottype",
           "named": true
         },
@@ -318,19 +322,11 @@
     "named": false
   },
   {
-    "type": "Bypass",
-    "named": false
-  },
-  {
     "type": "CelestialHash",
     "named": false
   },
   {
     "type": "CelestialParentHash",
-    "named": false
-  },
-  {
-    "type": "Channel",
     "named": false
   },
   {
@@ -642,10 +638,6 @@
     "named": false
   },
   {
-    "type": "MinWattsToContact",
-    "named": false
-  },
-  {
     "type": "MineablesInQueue",
     "named": false
   },
@@ -711,10 +703,6 @@
   },
   {
     "type": "Output",
-    "named": false
-  },
-  {
-    "type": "OverShootTarget",
     "named": false
   },
   {
@@ -1234,15 +1222,7 @@
     "named": false
   },
   {
-    "type": "SettingInputHash",
-    "named": false
-  },
-  {
     "type": "SettingOutput",
-    "named": false
-  },
-  {
-    "type": "SettingOutputHash",
     "named": false
   },
   {
@@ -1275,10 +1255,6 @@
   },
   {
     "type": "SolarAngle",
-    "named": false
-  },
-  {
-    "type": "SolarConstant",
     "named": false
   },
   {
@@ -1403,10 +1379,6 @@
   },
   {
     "type": "TrueAnomaly",
-    "named": false
-  },
-  {
-    "type": "Unknown",
     "named": false
   },
   {
@@ -1736,6 +1708,10 @@
   {
     "type": "deg2rad",
     "named": false
+  },
+  {
+    "type": "deprecated",
+    "named": true
   },
   {
     "type": "device",

@@ -7,10 +7,8 @@ AutoLand
 AutoShutOff
 Bpm
 BurnTimeRemaining
-Bypass
 CelestialHash
 CelestialParentHash
-Channel
 Channel0
 Channel1
 Channel2
@@ -77,7 +75,6 @@ Lock
 ManualResearchRequiredPod
 Mass
 Maximum
-MinWattsToContact
 MineablesInQueue
 MineablesInVicinity
 MinedQuantity
@@ -92,7 +89,6 @@ OperationalTemperatureEfficiency
 OrbitPeriod
 Orientation
 Output
-OverShootTarget
 PassedMoles
 Plant
 PlantEfficiency1
@@ -217,9 +213,7 @@ Rpm
 SemiMajorAxis
 Setting
 SettingInput
-SettingInputHash
 SettingOutput
-SettingOutputHash
 SignalID
 SignalStrength
 Sites
@@ -228,7 +222,6 @@ SizeX
 SizeY
 SizeZ
 SolarAngle
-SolarConstant
 SolarIrradiance
 SoundAlert
 Stress
@@ -257,7 +250,6 @@ TotalMolesOutput
 TotalMolesOutput2
 TotalQuantity
 TrueAnomaly
-Unknown
 VelocityMagnitude
 VelocityRelativeX
 VelocityRelativeY

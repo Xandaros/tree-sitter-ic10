@@ -1022,6 +1022,10 @@
           {
             "type": "SYMBOL",
             "name": "reagentmode"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "deprecated"
           }
         ]
       }
@@ -1070,19 +1074,11 @@
           },
           {
             "type": "STRING",
-            "value": "Bypass"
-          },
-          {
-            "type": "STRING",
             "value": "CelestialHash"
           },
           {
             "type": "STRING",
             "value": "CelestialParentHash"
-          },
-          {
-            "type": "STRING",
-            "value": "Channel"
           },
           {
             "type": "STRING",
@@ -1350,10 +1346,6 @@
           },
           {
             "type": "STRING",
-            "value": "MinWattsToContact"
-          },
-          {
-            "type": "STRING",
             "value": "MineablesInQueue"
           },
           {
@@ -1407,10 +1399,6 @@
           {
             "type": "STRING",
             "value": "Output"
-          },
-          {
-            "type": "STRING",
-            "value": "OverShootTarget"
           },
           {
             "type": "STRING",
@@ -1910,15 +1898,7 @@
           },
           {
             "type": "STRING",
-            "value": "SettingInputHash"
-          },
-          {
-            "type": "STRING",
             "value": "SettingOutput"
-          },
-          {
-            "type": "STRING",
-            "value": "SettingOutputHash"
           },
           {
             "type": "STRING",
@@ -1951,10 +1931,6 @@
           {
             "type": "STRING",
             "value": "SolarAngle"
-          },
-          {
-            "type": "STRING",
-            "value": "SolarConstant"
           },
           {
             "type": "STRING",
@@ -2067,10 +2043,6 @@
           {
             "type": "STRING",
             "value": "TrueAnomaly"
-          },
-          {
-            "type": "STRING",
-            "value": "Unknown"
           },
           {
             "type": "STRING",
@@ -3688,6 +3660,34 @@
             },
             {
               "type": "STRING",
+              "value": "RobotMode.Follow"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.MoveToTarget"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.None"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.PathToTarget"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.Roam"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.StorageFull"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.Unload"
+            },
+            {
+              "type": "STRING",
               "value": "SlotClass.AccessCard"
             },
             {
@@ -4085,6 +4085,178 @@
             {
               "type": "STRING",
               "value": "Vent.Outward"
+            }
+          ]
+        }
+      }
+    },
+    "deprecated": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 5,
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "ExportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "ExportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "ImportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "ImportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth4"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantEfficiency1"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantEfficiency2"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantEfficiency3"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantEfficiency4"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth1"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth2"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth3"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth4"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHash1"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHash2"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHash3"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHash4"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHealth1"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHealth2"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHealth3"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantHealth4"
             }
           ]
         }

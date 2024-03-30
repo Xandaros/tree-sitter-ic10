@@ -6,6 +6,7 @@ const slotlogictypes = fs.readFileSync('./data/slotlogictypes.txt').toString().s
 const batchmodes = fs.readFileSync('./data/batchmodes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
 const reagentmodes = fs.readFileSync('./data/reagentmodes.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
 const enums = fs.readFileSync('./data/enums.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
+const deprecated = fs.readFileSync('./data/deprecated.txt').toString().split("\n").map((op) => op.trim()).filter((op) => !!op)
 
 
 module.exports = grammar({
@@ -115,7 +116,7 @@ module.exports = grammar({
         ),
 
         logicable: $ => prec(5,choice(
-            $.logictype, $.logicslottype, $.batchmode, $.reagentmode
+            $.logictype, $.logicslottype, $.batchmode, $.reagentmode, $.deprecated
         )),
 
         logictype: $ => prec(6,choice(
@@ -136,6 +137,10 @@ module.exports = grammar({
 
         enum: $ => token(prec(5,choice(
             ...enums
+        ))),
+
+        deprecated: $ => token(prec(5,choice(
+            ...deprecated
         )))
     }
 });

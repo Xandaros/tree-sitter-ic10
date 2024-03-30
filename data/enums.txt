@@ -346,6 +346,13 @@ PowerMode.Charging
 PowerMode.Discharged
 PowerMode.Discharging
 PowerMode.Idle
+RobotMode.Follow
+RobotMode.MoveToTarget
+RobotMode.None
+RobotMode.PathToTarget
+RobotMode.Roam
+RobotMode.StorageFull
+RobotMode.Unload
 SlotClass.AccessCard
 SlotClass.Appliance
 SlotClass.Back
