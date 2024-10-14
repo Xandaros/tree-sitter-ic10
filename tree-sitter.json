@@ -1,0 +1,28 @@
+{
+  "grammars": [
+    {
+      "name": "ic10",
+      "camelcase": "Ic10",
+      "scope": "source.ic10",
+      "path": ".",
+      "file-types": null,
+      "injection-regex": "^ic10$"
+    }
+  ],
+  "metadata": {
+    "version": "0.2.0",
+    "license": "MIT",
+    "description": "ic10 grammar for tree-sitter",
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-ic10"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
