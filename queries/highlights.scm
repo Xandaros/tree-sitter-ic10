@@ -1,7 +1,12 @@
-(comment) @comment
+(comment)@comment
 (instruction (operation)@keyword)
-(logictype)@string
-(device)@preproc
-(register)@macro
-(number)@float
+(logictype)@constant.macro
+(constant)@constant.builtin
+(device)@variable.builtin
+(register)@variable.parameter
+(number)@number.float
 (identifier)@variable
+(hash_preproc)@function.macro
+(hash_preproc string: (preproc_string) @string)
+(enum)@type.builtin
+(label)@function

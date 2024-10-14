@@ -154,7 +154,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "logictype"
+          "name": "logicable"
         },
         {
           "type": "SYMBOL",
@@ -194,7 +194,7 @@
                 },
                 {
                   "type": "PATTERN",
-                  "value": "[0-9]|1[0-5]"
+                  "value": "[0-9]|1[0-7]"
                 }
               ]
             }
@@ -271,7 +271,7 @@
                     },
                     {
                       "type": "PATTERN",
-                      "value": "[0-9]|1[0-5]"
+                      "value": "[0-9]|1[0-7]"
                     }
                   ]
                 }
@@ -281,7 +281,7 @@
         }
       }
     },
-    "_constant": {
+    "constant": {
       "type": "CHOICE",
       "members": [
         {
@@ -420,11 +420,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_constant"
+          "name": "constant"
         },
         {
           "type": "SYMBOL",
           "name": "hash_preproc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "enum"
         }
       ]
     },
@@ -433,35 +437,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "l"
+          "value": "abs"
         },
         {
           "type": "STRING",
-          "value": "s"
-        },
-        {
-          "type": "STRING",
-          "value": "ls"
-        },
-        {
-          "type": "STRING",
-          "value": "lr"
-        },
-        {
-          "type": "STRING",
-          "value": "sb"
-        },
-        {
-          "type": "STRING",
-          "value": "lb"
-        },
-        {
-          "type": "STRING",
-          "value": "alias"
-        },
-        {
-          "type": "STRING",
-          "value": "move"
+          "value": "acos"
         },
         {
           "type": "STRING",
@@ -469,47 +449,7 @@
         },
         {
           "type": "STRING",
-          "value": "sub"
-        },
-        {
-          "type": "STRING",
-          "value": "sdse"
-        },
-        {
-          "type": "STRING",
-          "value": "sdns"
-        },
-        {
-          "type": "STRING",
-          "value": "slt"
-        },
-        {
-          "type": "STRING",
-          "value": "sgt"
-        },
-        {
-          "type": "STRING",
-          "value": "sle"
-        },
-        {
-          "type": "STRING",
-          "value": "sge"
-        },
-        {
-          "type": "STRING",
-          "value": "seq"
-        },
-        {
-          "type": "STRING",
-          "value": "sne"
-        },
-        {
-          "type": "STRING",
-          "value": "sap"
-        },
-        {
-          "type": "STRING",
-          "value": "sna"
+          "value": "alias"
         },
         {
           "type": "STRING",
@@ -517,51 +457,31 @@
         },
         {
           "type": "STRING",
-          "value": "or"
+          "value": "asin"
         },
         {
           "type": "STRING",
-          "value": "xor"
+          "value": "atan"
         },
         {
           "type": "STRING",
-          "value": "nor"
+          "value": "atan2"
         },
         {
           "type": "STRING",
-          "value": "mul"
+          "value": "bap"
         },
         {
           "type": "STRING",
-          "value": "div"
+          "value": "bapal"
         },
         {
           "type": "STRING",
-          "value": "mod"
+          "value": "bapz"
         },
         {
           "type": "STRING",
-          "value": "j"
-        },
-        {
-          "type": "STRING",
-          "value": "bltz"
-        },
-        {
-          "type": "STRING",
-          "value": "bgez"
-        },
-        {
-          "type": "STRING",
-          "value": "blez"
-        },
-        {
-          "type": "STRING",
-          "value": "bgtz"
-        },
-        {
-          "type": "STRING",
-          "value": "bdse"
+          "value": "bapzal"
         },
         {
           "type": "STRING",
@@ -569,15 +489,267 @@
         },
         {
           "type": "STRING",
-          "value": "bnan"
+          "value": "bdnsal"
+        },
+        {
+          "type": "STRING",
+          "value": "bdse"
+        },
+        {
+          "type": "STRING",
+          "value": "bdseal"
+        },
+        {
+          "type": "STRING",
+          "value": "beq"
+        },
+        {
+          "type": "STRING",
+          "value": "beqal"
+        },
+        {
+          "type": "STRING",
+          "value": "beqz"
+        },
+        {
+          "type": "STRING",
+          "value": "beqzal"
+        },
+        {
+          "type": "STRING",
+          "value": "bge"
+        },
+        {
+          "type": "STRING",
+          "value": "bgeal"
+        },
+        {
+          "type": "STRING",
+          "value": "bgez"
+        },
+        {
+          "type": "STRING",
+          "value": "bgezal"
+        },
+        {
+          "type": "STRING",
+          "value": "bgt"
+        },
+        {
+          "type": "STRING",
+          "value": "bgtal"
+        },
+        {
+          "type": "STRING",
+          "value": "bgtz"
+        },
+        {
+          "type": "STRING",
+          "value": "bgtzal"
+        },
+        {
+          "type": "STRING",
+          "value": "ble"
+        },
+        {
+          "type": "STRING",
+          "value": "bleal"
+        },
+        {
+          "type": "STRING",
+          "value": "blez"
+        },
+        {
+          "type": "STRING",
+          "value": "blezal"
+        },
+        {
+          "type": "STRING",
+          "value": "blt"
+        },
+        {
+          "type": "STRING",
+          "value": "bltal"
+        },
+        {
+          "type": "STRING",
+          "value": "bltz"
+        },
+        {
+          "type": "STRING",
+          "value": "bltzal"
+        },
+        {
+          "type": "STRING",
+          "value": "bna"
+        },
+        {
+          "type": "STRING",
+          "value": "bnaal"
         },
         {
           "type": "STRING",
           "value": "bnan"
+        },
+        {
+          "type": "STRING",
+          "value": "bnaz"
+        },
+        {
+          "type": "STRING",
+          "value": "bnazal"
+        },
+        {
+          "type": "STRING",
+          "value": "bne"
+        },
+        {
+          "type": "STRING",
+          "value": "bneal"
+        },
+        {
+          "type": "STRING",
+          "value": "bnez"
+        },
+        {
+          "type": "STRING",
+          "value": "bnezal"
+        },
+        {
+          "type": "STRING",
+          "value": "brap"
+        },
+        {
+          "type": "STRING",
+          "value": "brapz"
+        },
+        {
+          "type": "STRING",
+          "value": "brdns"
+        },
+        {
+          "type": "STRING",
+          "value": "brdse"
+        },
+        {
+          "type": "STRING",
+          "value": "breq"
+        },
+        {
+          "type": "STRING",
+          "value": "breqz"
+        },
+        {
+          "type": "STRING",
+          "value": "brge"
+        },
+        {
+          "type": "STRING",
+          "value": "brgez"
+        },
+        {
+          "type": "STRING",
+          "value": "brgt"
+        },
+        {
+          "type": "STRING",
+          "value": "brgtz"
+        },
+        {
+          "type": "STRING",
+          "value": "brle"
+        },
+        {
+          "type": "STRING",
+          "value": "brlez"
+        },
+        {
+          "type": "STRING",
+          "value": "brlt"
+        },
+        {
+          "type": "STRING",
+          "value": "brltz"
+        },
+        {
+          "type": "STRING",
+          "value": "brna"
         },
         {
           "type": "STRING",
           "value": "brnan"
+        },
+        {
+          "type": "STRING",
+          "value": "brnaz"
+        },
+        {
+          "type": "STRING",
+          "value": "brne"
+        },
+        {
+          "type": "STRING",
+          "value": "brnez"
+        },
+        {
+          "type": "STRING",
+          "value": "ceil"
+        },
+        {
+          "type": "STRING",
+          "value": "cos"
+        },
+        {
+          "type": "STRING",
+          "value": "define"
+        },
+        {
+          "type": "STRING",
+          "value": "div"
+        },
+        {
+          "type": "STRING",
+          "value": "exp"
+        },
+        {
+          "type": "STRING",
+          "value": "floor"
+        },
+        {
+          "type": "STRING",
+          "value": "get"
+        },
+        {
+          "type": "STRING",
+          "value": "getd"
+        },
+        {
+          "type": "STRING",
+          "value": "hcf"
+        },
+        {
+          "type": "STRING",
+          "value": "j"
+        },
+        {
+          "type": "STRING",
+          "value": "jal"
+        },
+        {
+          "type": "STRING",
+          "value": "jr"
+        },
+        {
+          "type": "STRING",
+          "value": "l"
+        },
+        {
+          "type": "STRING",
+          "value": "label"
+        },
+        {
+          "type": "STRING",
+          "value": "lb"
         },
         {
           "type": "STRING",
@@ -593,163 +765,19 @@
         },
         {
           "type": "STRING",
+          "value": "ld"
+        },
+        {
+          "type": "STRING",
+          "value": "log"
+        },
+        {
+          "type": "STRING",
           "value": "lr"
         },
         {
           "type": "STRING",
-          "value": "not"
-        },
-        {
-          "type": "STRING",
-          "value": "sbn"
-        },
-        {
-          "type": "STRING",
-          "value": "sbs"
-        },
-        {
-          "type": "STRING",
-          "value": "sla"
-        },
-        {
-          "type": "STRING",
-          "value": "sll"
-        },
-        {
-          "type": "STRING",
-          "value": "sra"
-        },
-        {
-          "type": "STRING",
-          "value": "srl"
-        },
-        {
-          "type": "STRING",
-          "value": "snan"
-        },
-        {
-          "type": "STRING",
-          "value": "snanz"
-        },
-        {
-          "type": "STRING",
-          "value": "ss"
-        },
-        {
-          "type": "STRING",
-          "value": "beq"
-        },
-        {
-          "type": "STRING",
-          "value": "bne"
-        },
-        {
-          "type": "STRING",
-          "value": "bap"
-        },
-        {
-          "type": "STRING",
-          "value": "bna"
-        },
-        {
-          "type": "STRING",
-          "value": "jal"
-        },
-        {
-          "type": "STRING",
-          "value": "brdse"
-        },
-        {
-          "type": "STRING",
-          "value": "brdns"
-        },
-        {
-          "type": "STRING",
-          "value": "bltzal"
-        },
-        {
-          "type": "STRING",
-          "value": "bgezal"
-        },
-        {
-          "type": "STRING",
-          "value": "blezal"
-        },
-        {
-          "type": "STRING",
-          "value": "bgtzal"
-        },
-        {
-          "type": "STRING",
-          "value": "beqal"
-        },
-        {
-          "type": "STRING",
-          "value": "bneal"
-        },
-        {
-          "type": "STRING",
-          "value": "jr"
-        },
-        {
-          "type": "STRING",
-          "value": "bdseal"
-        },
-        {
-          "type": "STRING",
-          "value": "bdnsal"
-        },
-        {
-          "type": "STRING",
-          "value": "brltz"
-        },
-        {
-          "type": "STRING",
-          "value": "brgez"
-        },
-        {
-          "type": "STRING",
-          "value": "brlez"
-        },
-        {
-          "type": "STRING",
-          "value": "brgtz"
-        },
-        {
-          "type": "STRING",
-          "value": "breq"
-        },
-        {
-          "type": "STRING",
-          "value": "brne"
-        },
-        {
-          "type": "STRING",
-          "value": "brap"
-        },
-        {
-          "type": "STRING",
-          "value": "brna"
-        },
-        {
-          "type": "STRING",
-          "value": "sqrt"
-        },
-        {
-          "type": "STRING",
-          "value": "round"
-        },
-        {
-          "type": "STRING",
-          "value": "trunc"
-        },
-        {
-          "type": "STRING",
-          "value": "ceil"
-        },
-        {
-          "type": "STRING",
-          "value": "floor"
+          "value": "ls"
         },
         {
           "type": "STRING",
@@ -761,27 +789,27 @@
         },
         {
           "type": "STRING",
-          "value": "abs"
+          "value": "mod"
         },
         {
           "type": "STRING",
-          "value": "log"
+          "value": "move"
         },
         {
           "type": "STRING",
-          "value": "exp"
+          "value": "mul"
         },
         {
           "type": "STRING",
-          "value": "rand"
+          "value": "nor"
         },
         {
           "type": "STRING",
-          "value": "yield"
+          "value": "not"
         },
         {
           "type": "STRING",
-          "value": "label"
+          "value": "or"
         },
         {
           "type": "STRING",
@@ -789,7 +817,7 @@
         },
         {
           "type": "STRING",
-          "value": "push"
+          "value": "poke"
         },
         {
           "type": "STRING",
@@ -797,139 +825,31 @@
         },
         {
           "type": "STRING",
-          "value": "hcf"
+          "value": "push"
         },
         {
           "type": "STRING",
-          "value": "select"
+          "value": "put"
         },
         {
           "type": "STRING",
-          "value": "blt"
+          "value": "putd"
         },
         {
           "type": "STRING",
-          "value": "bgt"
+          "value": "rand"
         },
         {
           "type": "STRING",
-          "value": "ble"
+          "value": "round"
         },
         {
           "type": "STRING",
-          "value": "bge"
+          "value": "s"
         },
         {
           "type": "STRING",
-          "value": "brlt"
-        },
-        {
-          "type": "STRING",
-          "value": "brgt"
-        },
-        {
-          "type": "STRING",
-          "value": "brle"
-        },
-        {
-          "type": "STRING",
-          "value": "brge"
-        },
-        {
-          "type": "STRING",
-          "value": "bltal"
-        },
-        {
-          "type": "STRING",
-          "value": "bgtal"
-        },
-        {
-          "type": "STRING",
-          "value": "bleal"
-        },
-        {
-          "type": "STRING",
-          "value": "bgeal"
-        },
-        {
-          "type": "STRING",
-          "value": "bapal"
-        },
-        {
-          "type": "STRING",
-          "value": "bnaal"
-        },
-        {
-          "type": "STRING",
-          "value": "beqz"
-        },
-        {
-          "type": "STRING",
-          "value": "bnez"
-        },
-        {
-          "type": "STRING",
-          "value": "bapz"
-        },
-        {
-          "type": "STRING",
-          "value": "bnaz"
-        },
-        {
-          "type": "STRING",
-          "value": "breqz"
-        },
-        {
-          "type": "STRING",
-          "value": "brnez"
-        },
-        {
-          "type": "STRING",
-          "value": "brapz"
-        },
-        {
-          "type": "STRING",
-          "value": "brnaz"
-        },
-        {
-          "type": "STRING",
-          "value": "beqzal"
-        },
-        {
-          "type": "STRING",
-          "value": "bnezal"
-        },
-        {
-          "type": "STRING",
-          "value": "bapzal"
-        },
-        {
-          "type": "STRING",
-          "value": "bnazal"
-        },
-        {
-          "type": "STRING",
-          "value": "sltz"
-        },
-        {
-          "type": "STRING",
-          "value": "sgtz"
-        },
-        {
-          "type": "STRING",
-          "value": "slez"
-        },
-        {
-          "type": "STRING",
-          "value": "sgez"
-        },
-        {
-          "type": "STRING",
-          "value": "seqz"
-        },
-        {
-          "type": "STRING",
-          "value": "snez"
+          "value": "sap"
         },
         {
           "type": "STRING",
@@ -937,15 +857,55 @@
         },
         {
           "type": "STRING",
-          "value": "snaz"
+          "value": "sb"
         },
         {
           "type": "STRING",
-          "value": "define"
+          "value": "sbn"
         },
         {
           "type": "STRING",
-          "value": "sleep"
+          "value": "sbs"
+        },
+        {
+          "type": "STRING",
+          "value": "sd"
+        },
+        {
+          "type": "STRING",
+          "value": "sdns"
+        },
+        {
+          "type": "STRING",
+          "value": "sdse"
+        },
+        {
+          "type": "STRING",
+          "value": "select"
+        },
+        {
+          "type": "STRING",
+          "value": "seq"
+        },
+        {
+          "type": "STRING",
+          "value": "seqz"
+        },
+        {
+          "type": "STRING",
+          "value": "sge"
+        },
+        {
+          "type": "STRING",
+          "value": "sgez"
+        },
+        {
+          "type": "STRING",
+          "value": "sgt"
+        },
+        {
+          "type": "STRING",
+          "value": "sgtz"
         },
         {
           "type": "STRING",
@@ -953,7 +913,75 @@
         },
         {
           "type": "STRING",
-          "value": "asin"
+          "value": "sla"
+        },
+        {
+          "type": "STRING",
+          "value": "sle"
+        },
+        {
+          "type": "STRING",
+          "value": "sleep"
+        },
+        {
+          "type": "STRING",
+          "value": "slez"
+        },
+        {
+          "type": "STRING",
+          "value": "sll"
+        },
+        {
+          "type": "STRING",
+          "value": "slt"
+        },
+        {
+          "type": "STRING",
+          "value": "sltz"
+        },
+        {
+          "type": "STRING",
+          "value": "sna"
+        },
+        {
+          "type": "STRING",
+          "value": "snan"
+        },
+        {
+          "type": "STRING",
+          "value": "snanz"
+        },
+        {
+          "type": "STRING",
+          "value": "snaz"
+        },
+        {
+          "type": "STRING",
+          "value": "sne"
+        },
+        {
+          "type": "STRING",
+          "value": "snez"
+        },
+        {
+          "type": "STRING",
+          "value": "sqrt"
+        },
+        {
+          "type": "STRING",
+          "value": "sra"
+        },
+        {
+          "type": "STRING",
+          "value": "srl"
+        },
+        {
+          "type": "STRING",
+          "value": "ss"
+        },
+        {
+          "type": "STRING",
+          "value": "sub"
         },
         {
           "type": "STRING",
@@ -961,23 +989,1276 @@
         },
         {
           "type": "STRING",
-          "value": "atan"
+          "value": "trunc"
         },
         {
           "type": "STRING",
-          "value": "cos"
+          "value": "xor"
         },
         {
           "type": "STRING",
-          "value": "acos"
-        },
-        {
-          "type": "STRING",
-          "value": "atan"
+          "value": "yield"
         }
       ]
     },
+    "logicable": {
+      "type": "PREC",
+      "value": 5,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "logictype"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "logicslottype"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "batchmode"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "reagentmode"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "deprecated"
+          }
+        ]
+      }
+    },
     "logictype": {
+      "type": "PREC",
+      "value": 6,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "Acceleration"
+          },
+          {
+            "type": "STRING",
+            "value": "Activate"
+          },
+          {
+            "type": "STRING",
+            "value": "AirRelease"
+          },
+          {
+            "type": "STRING",
+            "value": "AlignmentError"
+          },
+          {
+            "type": "STRING",
+            "value": "Apex"
+          },
+          {
+            "type": "STRING",
+            "value": "AutoLand"
+          },
+          {
+            "type": "STRING",
+            "value": "AutoShutOff"
+          },
+          {
+            "type": "STRING",
+            "value": "Bpm"
+          },
+          {
+            "type": "STRING",
+            "value": "BurnTimeRemaining"
+          },
+          {
+            "type": "STRING",
+            "value": "CelestialHash"
+          },
+          {
+            "type": "STRING",
+            "value": "CelestialParentHash"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel0"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel1"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel2"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel3"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel4"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel5"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel6"
+          },
+          {
+            "type": "STRING",
+            "value": "Channel7"
+          },
+          {
+            "type": "STRING",
+            "value": "Charge"
+          },
+          {
+            "type": "STRING",
+            "value": "Chart"
+          },
+          {
+            "type": "STRING",
+            "value": "ChartedNavPoints"
+          },
+          {
+            "type": "STRING",
+            "value": "ClearMemory"
+          },
+          {
+            "type": "STRING",
+            "value": "CollectableGoods"
+          },
+          {
+            "type": "STRING",
+            "value": "Color"
+          },
+          {
+            "type": "STRING",
+            "value": "Combustion"
+          },
+          {
+            "type": "STRING",
+            "value": "CombustionInput"
+          },
+          {
+            "type": "STRING",
+            "value": "CombustionInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "CombustionLimiter"
+          },
+          {
+            "type": "STRING",
+            "value": "CombustionOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "CombustionOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "CompletionRatio"
+          },
+          {
+            "type": "STRING",
+            "value": "ContactTypeId"
+          },
+          {
+            "type": "STRING",
+            "value": "CurrentCode"
+          },
+          {
+            "type": "STRING",
+            "value": "CurrentResearchPodType"
+          },
+          {
+            "type": "STRING",
+            "value": "Density"
+          },
+          {
+            "type": "STRING",
+            "value": "DestinationCode"
+          },
+          {
+            "type": "STRING",
+            "value": "Discover"
+          },
+          {
+            "type": "STRING",
+            "value": "DistanceAu"
+          },
+          {
+            "type": "STRING",
+            "value": "DistanceKm"
+          },
+          {
+            "type": "STRING",
+            "value": "DrillCondition"
+          },
+          {
+            "type": "STRING",
+            "value": "DryMass"
+          },
+          {
+            "type": "STRING",
+            "value": "Eccentricity"
+          },
+          {
+            "type": "STRING",
+            "value": "ElevatorLevel"
+          },
+          {
+            "type": "STRING",
+            "value": "ElevatorSpeed"
+          },
+          {
+            "type": "STRING",
+            "value": "EntityState"
+          },
+          {
+            "type": "STRING",
+            "value": "EnvironmentEfficiency"
+          },
+          {
+            "type": "STRING",
+            "value": "Error"
+          },
+          {
+            "type": "STRING",
+            "value": "ExhaustVelocity"
+          },
+          {
+            "type": "STRING",
+            "value": "ExportCount"
+          },
+          {
+            "type": "STRING",
+            "value": "ExportQuantity"
+          },
+          {
+            "type": "STRING",
+            "value": "ExportSlotHash"
+          },
+          {
+            "type": "STRING",
+            "value": "ExportSlotOccupant"
+          },
+          {
+            "type": "STRING",
+            "value": "Filtration"
+          },
+          {
+            "type": "STRING",
+            "value": "FlightControlRule"
+          },
+          {
+            "type": "STRING",
+            "value": "Flush"
+          },
+          {
+            "type": "STRING",
+            "value": "ForceWrite"
+          },
+          {
+            "type": "STRING",
+            "value": "ForwardX"
+          },
+          {
+            "type": "STRING",
+            "value": "ForwardY"
+          },
+          {
+            "type": "STRING",
+            "value": "ForwardZ"
+          },
+          {
+            "type": "STRING",
+            "value": "Fuel"
+          },
+          {
+            "type": "STRING",
+            "value": "Harvest"
+          },
+          {
+            "type": "STRING",
+            "value": "Horizontal"
+          },
+          {
+            "type": "STRING",
+            "value": "HorizontalRatio"
+          },
+          {
+            "type": "STRING",
+            "value": "Idle"
+          },
+          {
+            "type": "STRING",
+            "value": "ImportCount"
+          },
+          {
+            "type": "STRING",
+            "value": "ImportQuantity"
+          },
+          {
+            "type": "STRING",
+            "value": "ImportSlotHash"
+          },
+          {
+            "type": "STRING",
+            "value": "ImportSlotOccupant"
+          },
+          {
+            "type": "STRING",
+            "value": "Inclination"
+          },
+          {
+            "type": "STRING",
+            "value": "Index"
+          },
+          {
+            "type": "STRING",
+            "value": "InterrogationProgress"
+          },
+          {
+            "type": "STRING",
+            "value": "LineNumber"
+          },
+          {
+            "type": "STRING",
+            "value": "Lock"
+          },
+          {
+            "type": "STRING",
+            "value": "ManualResearchRequiredPod"
+          },
+          {
+            "type": "STRING",
+            "value": "Mass"
+          },
+          {
+            "type": "STRING",
+            "value": "Maximum"
+          },
+          {
+            "type": "STRING",
+            "value": "MineablesInQueue"
+          },
+          {
+            "type": "STRING",
+            "value": "MineablesInVicinity"
+          },
+          {
+            "type": "STRING",
+            "value": "MinedQuantity"
+          },
+          {
+            "type": "STRING",
+            "value": "MinimumWattsToContact"
+          },
+          {
+            "type": "STRING",
+            "value": "Mode"
+          },
+          {
+            "type": "STRING",
+            "value": "NavPoints"
+          },
+          {
+            "type": "STRING",
+            "value": "NextWeatherEventTime"
+          },
+          {
+            "type": "STRING",
+            "value": "None"
+          },
+          {
+            "type": "STRING",
+            "value": "On"
+          },
+          {
+            "type": "STRING",
+            "value": "Open"
+          },
+          {
+            "type": "STRING",
+            "value": "OperationalTemperatureEfficiency"
+          },
+          {
+            "type": "STRING",
+            "value": "OrbitPeriod"
+          },
+          {
+            "type": "STRING",
+            "value": "Orientation"
+          },
+          {
+            "type": "STRING",
+            "value": "Output"
+          },
+          {
+            "type": "STRING",
+            "value": "PassedMoles"
+          },
+          {
+            "type": "STRING",
+            "value": "Plant"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantEfficiency1"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantEfficiency2"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantEfficiency3"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantEfficiency4"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantGrowth1"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantGrowth2"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantGrowth3"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantGrowth4"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHash1"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHash2"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHash3"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHash4"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHealth1"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHealth2"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHealth3"
+          },
+          {
+            "type": "STRING",
+            "value": "PlantHealth4"
+          },
+          {
+            "type": "STRING",
+            "value": "PositionX"
+          },
+          {
+            "type": "STRING",
+            "value": "PositionY"
+          },
+          {
+            "type": "STRING",
+            "value": "PositionZ"
+          },
+          {
+            "type": "STRING",
+            "value": "Power"
+          },
+          {
+            "type": "STRING",
+            "value": "PowerActual"
+          },
+          {
+            "type": "STRING",
+            "value": "PowerGeneration"
+          },
+          {
+            "type": "STRING",
+            "value": "PowerPotential"
+          },
+          {
+            "type": "STRING",
+            "value": "PowerRequired"
+          },
+          {
+            "type": "STRING",
+            "value": "PrefabHash"
+          },
+          {
+            "type": "STRING",
+            "value": "Pressure"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureEfficiency"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureExternal"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureInput"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureInternal"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "PressureSetting"
+          },
+          {
+            "type": "STRING",
+            "value": "Progress"
+          },
+          {
+            "type": "STRING",
+            "value": "Quantity"
+          },
+          {
+            "type": "STRING",
+            "value": "Ratio"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioCarbonDioxide"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioCarbonDioxideInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioCarbonDioxideInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioCarbonDioxideOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioCarbonDioxideOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioHydrogen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidCarbonDioxide"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidCarbonDioxideInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidCarbonDioxideInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidCarbonDioxideOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidCarbonDioxideOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidHydrogen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrogen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrogenInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrogenInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrogenOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrogenOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrousOxide"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrousOxideInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrousOxideInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrousOxideOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidNitrousOxideOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidOxygen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidOxygenInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidOxygenInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidOxygenOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidOxygenOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidPollutant"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidPollutantInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidPollutantInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidPollutantOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidPollutantOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidVolatiles"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidVolatilesInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidVolatilesInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidVolatilesOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioLiquidVolatilesOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrogen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrogenInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrogenInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrogenOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrogenOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrousOxide"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrousOxideInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrousOxideInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrousOxideOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioNitrousOxideOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioOxygen"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioOxygenInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioOxygenInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioOxygenOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioOxygenOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutant"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutantInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutantInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutantOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutantOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioPollutedWater"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioSteam"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioSteamInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioSteamInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioSteamOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioSteamOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioVolatiles"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioVolatilesInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioVolatilesInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioVolatilesOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioVolatilesOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioWater"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioWaterInput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioWaterInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioWaterOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "RatioWaterOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "ReEntryAltitude"
+          },
+          {
+            "type": "STRING",
+            "value": "Reagents"
+          },
+          {
+            "type": "STRING",
+            "value": "RecipeHash"
+          },
+          {
+            "type": "STRING",
+            "value": "ReferenceId"
+          },
+          {
+            "type": "STRING",
+            "value": "RequestHash"
+          },
+          {
+            "type": "STRING",
+            "value": "RequiredPower"
+          },
+          {
+            "type": "STRING",
+            "value": "ReturnFuelCost"
+          },
+          {
+            "type": "STRING",
+            "value": "Richness"
+          },
+          {
+            "type": "STRING",
+            "value": "Rpm"
+          },
+          {
+            "type": "STRING",
+            "value": "SemiMajorAxis"
+          },
+          {
+            "type": "STRING",
+            "value": "Setting"
+          },
+          {
+            "type": "STRING",
+            "value": "SettingInput"
+          },
+          {
+            "type": "STRING",
+            "value": "SettingOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "SignalID"
+          },
+          {
+            "type": "STRING",
+            "value": "SignalStrength"
+          },
+          {
+            "type": "STRING",
+            "value": "Sites"
+          },
+          {
+            "type": "STRING",
+            "value": "Size"
+          },
+          {
+            "type": "STRING",
+            "value": "SizeX"
+          },
+          {
+            "type": "STRING",
+            "value": "SizeY"
+          },
+          {
+            "type": "STRING",
+            "value": "SizeZ"
+          },
+          {
+            "type": "STRING",
+            "value": "SolarAngle"
+          },
+          {
+            "type": "STRING",
+            "value": "SolarIrradiance"
+          },
+          {
+            "type": "STRING",
+            "value": "SoundAlert"
+          },
+          {
+            "type": "STRING",
+            "value": "Stress"
+          },
+          {
+            "type": "STRING",
+            "value": "Survey"
+          },
+          {
+            "type": "STRING",
+            "value": "TargetPadIndex"
+          },
+          {
+            "type": "STRING",
+            "value": "TargetX"
+          },
+          {
+            "type": "STRING",
+            "value": "TargetY"
+          },
+          {
+            "type": "STRING",
+            "value": "TargetZ"
+          },
+          {
+            "type": "STRING",
+            "value": "Temperature"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureDifferentialEfficiency"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureExternal"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureInput"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "TemperatureSetting"
+          },
+          {
+            "type": "STRING",
+            "value": "Throttle"
+          },
+          {
+            "type": "STRING",
+            "value": "Thrust"
+          },
+          {
+            "type": "STRING",
+            "value": "ThrustToWeight"
+          },
+          {
+            "type": "STRING",
+            "value": "Time"
+          },
+          {
+            "type": "STRING",
+            "value": "TimeToDestination"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalMoles"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalMolesInput"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalMolesInput2"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalMolesOutput"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalMolesOutput2"
+          },
+          {
+            "type": "STRING",
+            "value": "TotalQuantity"
+          },
+          {
+            "type": "STRING",
+            "value": "TrueAnomaly"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityMagnitude"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityRelativeX"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityRelativeY"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityRelativeZ"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityX"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityY"
+          },
+          {
+            "type": "STRING",
+            "value": "VelocityZ"
+          },
+          {
+            "type": "STRING",
+            "value": "Vertical"
+          },
+          {
+            "type": "STRING",
+            "value": "VerticalRatio"
+          },
+          {
+            "type": "STRING",
+            "value": "Volume"
+          },
+          {
+            "type": "STRING",
+            "value": "VolumeOfLiquid"
+          },
+          {
+            "type": "STRING",
+            "value": "WattsReachingContact"
+          },
+          {
+            "type": "STRING",
+            "value": "Weight"
+          },
+          {
+            "type": "STRING",
+            "value": "WorkingGasEfficiency"
+          }
+        ]
+      }
+    },
+    "logicslottype": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Charge"
+        },
+        {
+          "type": "STRING",
+          "value": "ChargeRatio"
+        },
+        {
+          "type": "STRING",
+          "value": "Class"
+        },
+        {
+          "type": "STRING",
+          "value": "Damage"
+        },
+        {
+          "type": "STRING",
+          "value": "Efficiency"
+        },
+        {
+          "type": "STRING",
+          "value": "FilterType"
+        },
+        {
+          "type": "STRING",
+          "value": "Growth"
+        },
+        {
+          "type": "STRING",
+          "value": "Health"
+        },
+        {
+          "type": "STRING",
+          "value": "LineNumber"
+        },
+        {
+          "type": "STRING",
+          "value": "Lock"
+        },
+        {
+          "type": "STRING",
+          "value": "Mature"
+        },
+        {
+          "type": "STRING",
+          "value": "MaxQuantity"
+        },
+        {
+          "type": "STRING",
+          "value": "None"
+        },
+        {
+          "type": "STRING",
+          "value": "OccupantHash"
+        },
+        {
+          "type": "STRING",
+          "value": "Occupied"
+        },
+        {
+          "type": "STRING",
+          "value": "On"
+        },
+        {
+          "type": "STRING",
+          "value": "Open"
+        },
+        {
+          "type": "STRING",
+          "value": "PrefabHash"
+        },
+        {
+          "type": "STRING",
+          "value": "Pressure"
+        },
+        {
+          "type": "STRING",
+          "value": "PressureAir"
+        },
+        {
+          "type": "STRING",
+          "value": "PressureWaste"
+        },
+        {
+          "type": "STRING",
+          "value": "Quantity"
+        },
+        {
+          "type": "STRING",
+          "value": "ReferenceId"
+        },
+        {
+          "type": "STRING",
+          "value": "Seeding"
+        },
+        {
+          "type": "STRING",
+          "value": "SortingClass"
+        },
+        {
+          "type": "STRING",
+          "value": "Temperature"
+        },
+        {
+          "type": "STRING",
+          "value": "Volume"
+        }
+      ]
+    },
+    "batchmode": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Average"
+        },
+        {
+          "type": "STRING",
+          "value": "Maximum"
+        },
+        {
+          "type": "STRING",
+          "value": "Minimum"
+        },
+        {
+          "type": "STRING",
+          "value": "Sum"
+        }
+      ]
+    },
+    "reagentmode": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Contents"
+        },
+        {
+          "type": "STRING",
+          "value": "Recipe"
+        },
+        {
+          "type": "STRING",
+          "value": "Required"
+        },
+        {
+          "type": "STRING",
+          "value": "TotalContents"
+        }
+      ]
+    },
+    "enum": {
       "type": "TOKEN",
       "content": {
         "type": "PREC",
@@ -987,127 +2268,1839 @@
           "members": [
             {
               "type": "STRING",
-              "value": "Power"
+              "value": "AirCon.Cold"
             },
             {
               "type": "STRING",
-              "value": "Open"
+              "value": "AirCon.Hot"
             },
             {
               "type": "STRING",
-              "value": "Mode"
+              "value": "AirControl.Draught"
             },
             {
               "type": "STRING",
-              "value": "Error"
+              "value": "AirControl.None"
             },
             {
               "type": "STRING",
-              "value": "Lock"
+              "value": "AirControl.Offline"
             },
             {
               "type": "STRING",
-              "value": "Pressure"
+              "value": "AirControl.Pressure"
             },
             {
               "type": "STRING",
-              "value": "Temperature"
+              "value": "Color.Black"
             },
             {
               "type": "STRING",
-              "value": "PressureExternal"
+              "value": "Color.Blue"
             },
             {
               "type": "STRING",
-              "value": "PressureInternal"
+              "value": "Color.Brown"
             },
             {
               "type": "STRING",
-              "value": "Activate"
+              "value": "Color.Gray"
             },
             {
               "type": "STRING",
-              "value": "Charge"
+              "value": "Color.Green"
             },
             {
               "type": "STRING",
-              "value": "Setting"
+              "value": "Color.Khaki"
             },
             {
               "type": "STRING",
-              "value": "Reagents"
+              "value": "Color.Orange"
             },
             {
               "type": "STRING",
-              "value": "RatioOxygen"
+              "value": "Color.Pink"
             },
             {
               "type": "STRING",
-              "value": "RatioCarbonDioxide"
+              "value": "Color.Purple"
             },
             {
               "type": "STRING",
-              "value": "RatioNitrogen"
+              "value": "Color.Red"
             },
             {
               "type": "STRING",
-              "value": "RatioPollutant"
+              "value": "Color.White"
             },
             {
               "type": "STRING",
-              "value": "RatioVolatiles"
+              "value": "Color.Yellow"
             },
             {
               "type": "STRING",
-              "value": "RatioWater"
+              "value": "DaylightSensorMode.Default"
             },
             {
               "type": "STRING",
-              "value": "Horizontal"
+              "value": "DaylightSensorMode.Horizontal"
             },
             {
               "type": "STRING",
-              "value": "Vertical"
+              "value": "DaylightSensorMode.Vertical"
             },
             {
               "type": "STRING",
-              "value": "SolarAngle"
+              "value": "ElevatorMode.Downward"
             },
             {
               "type": "STRING",
-              "value": "Maximum"
+              "value": "ElevatorMode.Stationary"
             },
             {
               "type": "STRING",
-              "value": "Ratio"
+              "value": "ElevatorMode.Upward"
             },
             {
               "type": "STRING",
-              "value": "PowerPotential"
+              "value": "EntityState.Alive"
             },
             {
               "type": "STRING",
-              "value": "PowerActual"
+              "value": "EntityState.Dead"
             },
             {
               "type": "STRING",
-              "value": "Quantity"
+              "value": "EntityState.Decay"
             },
             {
               "type": "STRING",
-              "value": "On"
+              "value": "EntityState.Unconscious"
             },
             {
               "type": "STRING",
-              "value": "ImportQuantity"
+              "value": "Equals"
             },
             {
               "type": "STRING",
-              "value": "ImportSlotOccupant"
+              "value": "GasType.CarbonDioxide"
             },
             {
               "type": "STRING",
-              "value": "ExportQuantity"
+              "value": "GasType.Hydrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidCarbonDioxide"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidHydrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidNitrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidNitrousOxide"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidOxygen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidPollutant"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.LiquidVolatiles"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Nitrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.NitrousOxide"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Oxygen"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Pollutant"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.PollutedWater"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Steam"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Undefined"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Volatiles"
+            },
+            {
+              "type": "STRING",
+              "value": "GasType.Water"
+            },
+            {
+              "type": "STRING",
+              "value": "Greater"
+            },
+            {
+              "type": "STRING",
+              "value": "Less"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Charge"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.ChargeRatio"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Class"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Damage"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Efficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.FilterType"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Growth"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Health"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.LineNumber"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Lock"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Mature"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.MaxQuantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.None"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.OccupantHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Occupied"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.On"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Open"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.PrefabHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Pressure"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.PressureAir"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.PressureWaste"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Quantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.ReferenceId"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Seeding"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.SortingClass"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Temperature"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicSlotType.Volume"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Acceleration"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Activate"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.AirRelease"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.AlignmentError"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Apex"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.AutoLand"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.AutoShutOff"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Bpm"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.BurnTimeRemaining"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CelestialHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CelestialParentHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel0"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel5"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel6"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Channel7"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Charge"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Chart"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ChartedNavPoints"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ClearMemory"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CollectableGoods"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Color"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Combustion"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CombustionInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CombustionInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CombustionLimiter"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CombustionOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CombustionOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CompletionRatio"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ContactTypeId"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CurrentCode"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.CurrentResearchPodType"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Density"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.DestinationCode"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Discover"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.DistanceAu"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.DistanceKm"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.DrillCondition"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.DryMass"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Eccentricity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ElevatorLevel"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ElevatorSpeed"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.EntityState"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.EnvironmentEfficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Error"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExhaustVelocity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportCount"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportQuantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ExportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Filtration"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.FlightControlRule"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Flush"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ForceWrite"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ForwardX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ForwardY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ForwardZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Fuel"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Harvest"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Horizontal"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.HorizontalRatio"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Idle"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportCount"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportQuantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportSlotHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ImportSlotOccupant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Inclination"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Index"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.InterrogationProgress"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.LineNumber"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Lock"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ManualResearchRequiredPod"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Mass"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Maximum"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.MineablesInQueue"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.MineablesInVicinity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.MinedQuantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.MinimumWattsToContact"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Mode"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.NavPoints"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.NextWeatherEventTime"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.None"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.On"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Open"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.OperationalTemperatureEfficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.OrbitPeriod"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Orientation"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Output"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PassedMoles"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Plant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PositionX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PositionY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PositionZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Power"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PowerActual"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PowerGeneration"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PowerPotential"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PowerRequired"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PrefabHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Pressure"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureEfficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureExternal"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureInternal"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PressureSetting"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Progress"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Quantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Ratio"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioCarbonDioxide"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioCarbonDioxideInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioCarbonDioxideInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioCarbonDioxideOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioCarbonDioxideOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioHydrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidCarbonDioxide"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidCarbonDioxideInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidCarbonDioxideInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidCarbonDioxideOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidCarbonDioxideOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidHydrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrogenInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrogenInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrogenOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrogenOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrousOxide"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrousOxideInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrousOxideInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrousOxideOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidNitrousOxideOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidOxygen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidOxygenInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidOxygenInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidOxygenOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidOxygenOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidPollutant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidPollutantInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidPollutantInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidPollutantOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidPollutantOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidVolatiles"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidVolatilesInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidVolatilesInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidVolatilesOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioLiquidVolatilesOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrogen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrogenInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrogenInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrogenOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrogenOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrousOxide"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrousOxideInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrousOxideInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrousOxideOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioNitrousOxideOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioOxygen"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioOxygenInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioOxygenInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioOxygenOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioOxygenOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutant"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutantInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutantInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutantOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutantOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioPollutedWater"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioSteam"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioSteamInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioSteamInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioSteamOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioSteamOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioVolatiles"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioVolatilesInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioVolatilesInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioVolatilesOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioVolatilesOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioWater"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioWaterInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioWaterInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioWaterOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RatioWaterOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ReEntryAltitude"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Reagents"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RecipeHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ReferenceId"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RequestHash"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.RequiredPower"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ReturnFuelCost"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Richness"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Rpm"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SemiMajorAxis"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Setting"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SettingInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SettingOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SignalID"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SignalStrength"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Sites"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Size"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SizeX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SizeY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SizeZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SolarAngle"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SolarIrradiance"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.SoundAlert"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Stress"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Survey"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TargetPadIndex"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TargetX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TargetY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TargetZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Temperature"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureDifferentialEfficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureExternal"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TemperatureSetting"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Throttle"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Thrust"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.ThrustToWeight"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Time"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TimeToDestination"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalMoles"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalMolesInput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalMolesInput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalMolesOutput"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalMolesOutput2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TotalQuantity"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.TrueAnomaly"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityMagnitude"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityRelativeX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityRelativeY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityRelativeZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityX"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityY"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VelocityZ"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Vertical"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VerticalRatio"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Volume"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.VolumeOfLiquid"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.WattsReachingContact"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.Weight"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.WorkingGasEfficiency"
+            },
+            {
+              "type": "STRING",
+              "value": "NotEquals"
+            },
+            {
+              "type": "STRING",
+              "value": "PowerMode.Charged"
+            },
+            {
+              "type": "STRING",
+              "value": "PowerMode.Charging"
+            },
+            {
+              "type": "STRING",
+              "value": "PowerMode.Discharged"
+            },
+            {
+              "type": "STRING",
+              "value": "PowerMode.Discharging"
+            },
+            {
+              "type": "STRING",
+              "value": "PowerMode.Idle"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.Follow"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.MoveToTarget"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.None"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.PathToTarget"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.Roam"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.StorageFull"
+            },
+            {
+              "type": "STRING",
+              "value": "RobotMode.Unload"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.AccessCard"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Appliance"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Back"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Battery"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Belt"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Blocked"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Bottle"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Cartridge"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Circuit"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Circuitboard"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.CreditCard"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.DataDisk"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.DirtCanister"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.DrillHead"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Egg"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Entity"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Flare"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.GasCanister"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.GasFilter"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Glasses"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Helmet"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Ingot"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.LiquidBottle"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.LiquidCanister"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Magazine"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Motherboard"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.None"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Ore"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Organ"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Plant"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.ProgrammableChip"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.ScanningHead"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.SensorProcessingUnit"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.SoundCartridge"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Suit"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Tool"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Torpedo"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Uniform"
+            },
+            {
+              "type": "STRING",
+              "value": "SlotClass.Wreckage"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Appliances"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Atmospherics"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Clothing"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Default"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Food"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Ices"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Kits"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Ores"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Resources"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Storage"
+            },
+            {
+              "type": "STRING",
+              "value": "SortingClass.Tools"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.AirlockCycling"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm1"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm10"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm11"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm12"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm2"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm3"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm4"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm5"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm6"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm7"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm8"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alarm9"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Alert"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Danger"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Depressurising"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.FireFireFire"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Five"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Floor"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Four"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.HaltWhoGoesThere"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.HighCarbonDioxide"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.IntruderAlert"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.LiftOff"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.MalfunctionDetected"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Music1"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Music2"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Music3"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.None"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.One"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.PollutantsDetected"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.PowerLow"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.PressureHigh"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.PressureLow"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Pressurising"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.RocketLaunching"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.StormIncoming"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.SystemFailure"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.TemperatureHigh"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.TemperatureLow"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Three"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.TraderIncoming"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.TraderLanded"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Two"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Warning"
+            },
+            {
+              "type": "STRING",
+              "value": "Sound.Welcome"
+            },
+            {
+              "type": "STRING",
+              "value": "TransmitterMode.Active"
+            },
+            {
+              "type": "STRING",
+              "value": "TransmitterMode.Passive"
+            },
+            {
+              "type": "STRING",
+              "value": "Vent.Inward"
+            },
+            {
+              "type": "STRING",
+              "value": "Vent.Outward"
+            }
+          ]
+        }
+      }
+    },
+    "deprecated": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 5,
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "ExportSlotHash"
             },
             {
               "type": "STRING",
@@ -1115,79 +4108,91 @@
             },
             {
               "type": "STRING",
-              "value": "RequiredPower"
-            },
-            {
-              "type": "STRING",
-              "value": "HorizontalRatio"
-            },
-            {
-              "type": "STRING",
-              "value": "VerticalRatio"
-            },
-            {
-              "type": "STRING",
-              "value": "PowerRequired"
-            },
-            {
-              "type": "STRING",
-              "value": "Idle"
-            },
-            {
-              "type": "STRING",
-              "value": "Color"
-            },
-            {
-              "type": "STRING",
-              "value": "ElevatorSpeed"
-            },
-            {
-              "type": "STRING",
-              "value": "ElevatorLevel"
-            },
-            {
-              "type": "STRING",
-              "value": "RecipeHash"
-            },
-            {
-              "type": "STRING",
-              "value": "ExportSlotHash"
-            },
-            {
-              "type": "STRING",
               "value": "ImportSlotHash"
             },
             {
               "type": "STRING",
-              "value": "PlantHealth1"
+              "value": "ImportSlotOccupant"
             },
             {
               "type": "STRING",
-              "value": "PlantHealth2"
+              "value": "LogicType.ExportSlotHash"
             },
             {
               "type": "STRING",
-              "value": "PlantHealth3"
+              "value": "LogicType.ExportSlotOccupant"
             },
             {
               "type": "STRING",
-              "value": "PlantHealth4"
+              "value": "LogicType.ImportSlotHash"
             },
             {
               "type": "STRING",
-              "value": "PlantGrowth1"
+              "value": "LogicType.ImportSlotOccupant"
             },
             {
               "type": "STRING",
-              "value": "PlantGrowth2"
+              "value": "LogicType.PlantEfficiency1"
             },
             {
               "type": "STRING",
-              "value": "PlantGrowth3"
+              "value": "LogicType.PlantEfficiency2"
             },
             {
               "type": "STRING",
-              "value": "PlantGrowth4"
+              "value": "LogicType.PlantEfficiency3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantEfficiency4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantGrowth4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHash4"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth1"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth2"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth3"
+            },
+            {
+              "type": "STRING",
+              "value": "LogicType.PlantHealth4"
             },
             {
               "type": "STRING",
@@ -1207,6 +4212,22 @@
             },
             {
               "type": "STRING",
+              "value": "PlantGrowth1"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth2"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth3"
+            },
+            {
+              "type": "STRING",
+              "value": "PlantGrowth4"
+            },
+            {
+              "type": "STRING",
               "value": "PlantHash1"
             },
             {
@@ -1223,551 +4244,19 @@
             },
             {
               "type": "STRING",
-              "value": "RequestHash"
+              "value": "PlantHealth1"
             },
             {
               "type": "STRING",
-              "value": "CompletionRatio"
+              "value": "PlantHealth2"
             },
             {
               "type": "STRING",
-              "value": "ClearMemory"
+              "value": "PlantHealth3"
             },
             {
               "type": "STRING",
-              "value": "ExportCount"
-            },
-            {
-              "type": "STRING",
-              "value": "ImportCount"
-            },
-            {
-              "type": "STRING",
-              "value": "PowerGeneration"
-            },
-            {
-              "type": "STRING",
-              "value": "TotalMoles"
-            },
-            {
-              "type": "STRING",
-              "value": "Volume"
-            },
-            {
-              "type": "STRING",
-              "value": "Plant"
-            },
-            {
-              "type": "STRING",
-              "value": "Harvest"
-            },
-            {
-              "type": "STRING",
-              "value": "Output"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureSetting"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureSetting"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureExternal"
-            },
-            {
-              "type": "STRING",
-              "value": "Filtration"
-            },
-            {
-              "type": "STRING",
-              "value": "AirRelease"
-            },
-            {
-              "type": "STRING",
-              "value": "PositionX"
-            },
-            {
-              "type": "STRING",
-              "value": "PositionY"
-            },
-            {
-              "type": "STRING",
-              "value": "PositionZ"
-            },
-            {
-              "type": "STRING",
-              "value": "VelocityMagnitude"
-            },
-            {
-              "type": "STRING",
-              "value": "VelocityRelativeX"
-            },
-            {
-              "type": "STRING",
-              "value": "VelocityRelativeY"
-            },
-            {
-              "type": "STRING",
-              "value": "VelocityRelativeZ"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrousOxide"
-            },
-            {
-              "type": "STRING",
-              "value": "PrefabHash"
-            },
-            {
-              "type": "STRING",
-              "value": "ForceWrite"
-            },
-            {
-              "type": "STRING",
-              "value": "SignalStrength"
-            },
-            {
-              "type": "STRING",
-              "value": "SignalID"
-            },
-            {
-              "type": "STRING",
-              "value": "TargetX"
-            },
-            {
-              "type": "STRING",
-              "value": "TargetY"
-            },
-            {
-              "type": "STRING",
-              "value": "TargetZ"
-            },
-            {
-              "type": "STRING",
-              "value": "SettingInput"
-            },
-            {
-              "type": "STRING",
-              "value": "SettingOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "CurrentResearchPodType"
-            },
-            {
-              "type": "STRING",
-              "value": "ManualResearchRequiredPod"
-            },
-            {
-              "type": "STRING",
-              "value": "MineablesInVicinity"
-            },
-            {
-              "type": "STRING",
-              "value": "MineablesInQueue"
-            },
-            {
-              "type": "STRING",
-              "value": "NextWeatherEventTime"
-            },
-            {
-              "type": "STRING",
-              "value": "Combustion"
-            },
-            {
-              "type": "STRING",
-              "value": "Fuel"
-            },
-            {
-              "type": "STRING",
-              "value": "ReturnFuelCost"
-            },
-            {
-              "type": "STRING",
-              "value": "CollectableGoods"
-            },
-            {
-              "type": "STRING",
-              "value": "Time"
-            },
-            {
-              "type": "STRING",
-              "value": "Bpm"
-            },
-            {
-              "type": "STRING",
-              "value": "EnvironmentEfficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "WorkingGasEfficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureInput"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioOxygenInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioCarbonDioxideInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrogenInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioPollutantInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioVolatilesInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioWaterInput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrousOxideInput"
-            },
-            {
-              "type": "STRING",
-              "value": "TotalMolesInput"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioOxygenInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioCarbonDioxideInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrogenInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioPollutantInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioVolatilesInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioWaterInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrousOxideInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "TotalMolesInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioOxygenOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioCarbonDioxideOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrogenOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioPollutantOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioVolatilesOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioWaterOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrousOxideOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "TotalMolesOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioOxygenOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioCarbonDioxideOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrogenOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioPollutantOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioVolatilesOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioWaterOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "RatioNitrousOxideOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "TotalMolesOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "CombustionInput"
-            },
-            {
-              "type": "STRING",
-              "value": "CombustionInput2"
-            },
-            {
-              "type": "STRING",
-              "value": "CombustionOutput"
-            },
-            {
-              "type": "STRING",
-              "value": "CombustionOutput2"
-            },
-            {
-              "type": "STRING",
-              "value": "OperationalTemperatureEfficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "TemperatureDifferentialEfficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureEfficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "CombustionLimiter"
-            },
-            {
-              "type": "STRING",
-              "value": "Throttle"
-            },
-            {
-              "type": "STRING",
-              "value": "Rpm"
-            },
-            {
-              "type": "STRING",
-              "value": "Stress"
-            },
-            {
-              "type": "STRING",
-              "value": "InterrogationProgress"
-            },
-            {
-              "type": "STRING",
-              "value": "TargetPadIndex"
-            },
-            {
-              "type": "STRING",
-              "value": "SizeX"
-            },
-            {
-              "type": "STRING",
-              "value": "SizeY"
-            },
-            {
-              "type": "STRING",
-              "value": "SizeZ"
-            },
-            {
-              "type": "STRING",
-              "value": "MinimumWattsToContact"
-            },
-            {
-              "type": "STRING",
-              "value": "WattsReachingContact"
-            },
-            {
-              "type": "STRING",
-              "value": "Occupied"
-            },
-            {
-              "type": "STRING",
-              "value": "OccupantHash"
-            },
-            {
-              "type": "STRING",
-              "value": "Quantity"
-            },
-            {
-              "type": "STRING",
-              "value": "Damage"
-            },
-            {
-              "type": "STRING",
-              "value": "Efficiency"
-            },
-            {
-              "type": "STRING",
-              "value": "Health"
-            },
-            {
-              "type": "STRING",
-              "value": "Growth"
-            },
-            {
-              "type": "STRING",
-              "value": "Pressure"
-            },
-            {
-              "type": "STRING",
-              "value": "Temperature"
-            },
-            {
-              "type": "STRING",
-              "value": "Charge"
-            },
-            {
-              "type": "STRING",
-              "value": "ChargeRatio"
-            },
-            {
-              "type": "STRING",
-              "value": "Class"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureWaste"
-            },
-            {
-              "type": "STRING",
-              "value": "PressureAir"
-            },
-            {
-              "type": "STRING",
-              "value": "MaxQuantity"
-            },
-            {
-              "type": "STRING",
-              "value": "Mature"
-            },
-            {
-              "type": "STRING",
-              "value": "PrefabHash"
-            },
-            {
-              "type": "STRING",
-              "value": "Seeding"
-            },
-            {
-              "type": "STRING",
-              "value": "Average"
-            },
-            {
-              "type": "STRING",
-              "value": "Sum"
-            },
-            {
-              "type": "STRING",
-              "value": "Minimum"
-            },
-            {
-              "type": "STRING",
-              "value": "Maximum"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel0"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel1"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel2"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel3"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel4"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel5"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel6"
-            },
-            {
-              "type": "STRING",
-              "value": "Channel7"
-            },
-            {
-              "type": "STRING",
-              "value": "Contents"
-            },
-            {
-              "type": "STRING",
-              "value": "Required"
-            },
-            {
-              "type": "STRING",
-              "value": "Recipe"
+              "value": "PlantHealth4"
             }
           ]
         }
@@ -1786,4 +4275,3 @@
   "inline": [],
   "supertypes": []
 }
-

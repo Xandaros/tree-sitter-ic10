@@ -1,0 +1,4 @@
+Average
+Maximum
+Minimum
+Sum
