@@ -1,10 +1,10 @@
 ================================================================================
-Hash preproc macro
+Network id access
 ================================================================================
 
-move r0 HASH("")
-move r0 HASH("asd")
-move r0 HASH("asd
+l r0 d0 Channel0
+l r0 d0:0 Channel0
+l r0 d0:99 Channel7
 
 --------------------------------------------------------------------------------
 
@@ -18,9 +18,11 @@ move r0 HASH("asd
         (operand
           (register))
         (operand
-          (number
-            (hash_preproc
-              (preproc_string)))))
+          (device_spec
+            (device)))
+        (operand
+          (logicable
+            (logictype))))
       (newline))
     (line
       (instruction
@@ -28,9 +30,12 @@ move r0 HASH("asd
         (operand
           (register))
         (operand
-          (number
-            (hash_preproc
-              (preproc_string)))))
+          (device_spec
+            (device)
+            (network_index)))
+        (operand
+          (logicable
+            (logictype))))
       (newline))
     (line
       (instruction
@@ -38,8 +43,10 @@ move r0 HASH("asd
         (operand
           (register))
         (operand
-          (number
-            (hash_preproc
-              (preproc_string)
-              (MISSING "")))))
+          (device_spec
+            (device)
+            (network_index)))
+        (operand
+          (logicable
+            (logictype))))
       (newline))))
