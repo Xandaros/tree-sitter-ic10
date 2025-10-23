@@ -17,7 +17,8 @@ move r0 5
         (operand
           (register))
         (operand
-          (number)))
+          (number
+            (constant))))
       (newline))
     (line
       (instruction
