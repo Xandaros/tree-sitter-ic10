@@ -91,6 +91,12 @@ module.exports = grammar({
             "\")",
         ),
 
+        str_preproc: $ => seq(
+            "STR(\"",
+            field('string', $.preproc_string),
+            "\")",
+        ),
+
         number: $ => choice(
             token(
                 choice(
@@ -108,6 +114,7 @@ module.exports = grammar({
             ),
             $.constant,
             $.hash_preproc,
+            $.str_preproc,
             $.enum
         ),
 

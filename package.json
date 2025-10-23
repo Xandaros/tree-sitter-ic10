@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-ic10",
-  "version": "0.3.0",
+  "version": "0.6.1",
   "description": "ic10 grammar for tree-sitter",
   "main": "bindings/node",
   "types": "bindings/node",

@@ -186,6 +186,10 @@
         {
           "type": "hash_preproc",
           "named": true
+        },
+        {
+          "type": "str_preproc",
+          "named": true
         }
       ]
     }
@@ -260,6 +264,22 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "str_preproc",
+    "named": true,
+    "fields": {
+      "string": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "preproc_string",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1204,6 +1224,10 @@
   },
   {
     "type": "Rpm",
+    "named": false
+  },
+  {
+    "type": "STR(\"",
     "named": false
   },
   {

@@ -1,0 +1,36 @@
+================================================================================
+String definition
+================================================================================
+
+define strOn STR("On")
+sbn lcds lcd Setting strOn
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (program
+    (line
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (identifier))
+        (operand
+          (number
+            (str_preproc
+              (preproc_string)))))
+      (newline))
+    (line
+      (instruction
+        (operation)
+        (operand
+          (identifier))
+        (operand
+          (identifier))
+        (operand
+          (logicable
+            (logictype)))
+        (operand
+          (identifier)))
+      (newline))))
