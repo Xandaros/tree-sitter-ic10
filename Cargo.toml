@@ -20,7 +20,13 @@ include = [
 path = "bindings/rust/lib.rs"
 
 [dependencies]
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 tree-sitter = "~0.25.7"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+tree-sitter-c2rust = "~0.25.2"
 
 [build-dependencies]
 cc = "1.0"
+tree-sitter-wasm-build-tool = "0.2.2"

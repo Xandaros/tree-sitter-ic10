@@ -15,7 +15,10 @@
 //! [Parser]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Parser.html
 //! [tree-sitter]: https://tree-sitter.github.io/
 
+#[cfg(not(target_arch = "wasm32"))]
 use tree_sitter::Language;
+#[cfg(target_arch = "wasm32")]
+use tree_sitter_c2rust::Language;
 
 extern "C" {
     fn tree_sitter_ic10() -> Language;
