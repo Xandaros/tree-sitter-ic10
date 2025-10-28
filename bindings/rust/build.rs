@@ -3,6 +3,16 @@ fn main() {
 
     let mut c_config = cc::Build::new();
     c_config.include(&src_dir);
+
+    if std::env::var("TARGET").unwrap() == "wasm32-unknown-unknown" {
+        c_config.target("wasm32-unknown-unknown");
+        println!(
+            "cargo:warning={}",
+            "Building for wasm32: Adding Treesitter WASM headers..."
+        );
+        tree_sitter_wasm_build_tool::add_wasm_headers(&mut c_config).unwrap();
+    }
+
     c_config
         .flag_if_supported("-Wno-unused-parameter")
         .flag_if_supported("-Wno-unused-but-set-variable")
