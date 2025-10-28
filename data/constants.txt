@@ -1,7 +1,9 @@
+deg2rad
+epsilon
 nan
-pinf
 ninf
 pi
-deg2rad
+pinf
 rad2deg
-epsilon
+rgas
+tau
