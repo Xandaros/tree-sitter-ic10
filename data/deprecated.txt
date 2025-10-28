@@ -1,11 +1,16 @@
+ExportQuantity
 ExportSlotHash
 ExportSlotOccupant
+ImportQuantity
 ImportSlotHash
 ImportSlotOccupant
+LogicType.ExportQuantity
 LogicType.ExportSlotHash
 LogicType.ExportSlotOccupant
+LogicType.ImportQuantity
 LogicType.ImportSlotHash
 LogicType.ImportSlotOccupant
+LogicType.None
 LogicType.PlantEfficiency1
 LogicType.PlantEfficiency2
 LogicType.PlantEfficiency3
@@ -22,6 +27,7 @@ LogicType.PlantHealth1
 LogicType.PlantHealth2
 LogicType.PlantHealth3
 LogicType.PlantHealth4
+None
 PlantEfficiency1
 PlantEfficiency2
 PlantEfficiency3

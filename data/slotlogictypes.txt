@@ -5,11 +5,14 @@ Damage
 Efficiency
 FilterType
 Growth
+HarvestedHash
 Health
 LineNumber
 Lock
 Mature
+MaturityRatio
 MaxQuantity
+Mode
 None
 OccupantHash
 Occupied
@@ -22,6 +25,7 @@ PressureWaste
 Quantity
 ReferenceId
 Seeding
+SeedingRatio
 SortingClass
 Temperature
 Volume
